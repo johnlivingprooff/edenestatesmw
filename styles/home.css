@@ -1,0 +1,84 @@
+.sect-one {
+    display: flex;
+}
+
+.top {
+    display: flex;
+    position: relative;
+}
+
+.top::after {
+    position: absolute;
+    background-color: rgba(0, 0, 1, 1);
+    pointer-events: none;
+}
+
+.top img {
+    max-width: 100%;
+    height: auto;
+    z-index: 2;
+}
+
+#booking-form {
+    position: absolute;
+    width: 280px;
+    margin-top: 150px;
+    margin-left: 150px;
+    background-color: rgba(231, 255, 152, 0.366);
+    z-index: 5000;
+    padding: 25px 45px 25px 25px;
+    color: beige;
+    p{
+        font-size: 12px;
+        color: #a6a5a5;
+        margin-top: 0;
+    }
+}
+
+#booking-form form {
+    display: block;
+    label {
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+    }
+    input {
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 10px;
+        padding-right: 5px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        display: block;
+    }
+    select {
+        width: 25%;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 5px;
+        display: flex;
+        margin-bottom: 25px;
+    }
+
+    button {
+        width: 65%;
+        margin-left: 40%;
+        padding-top: 12px;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        background-color: #001a56;
+        color: beige;
+        border: none;
+        transition: all 0.3s ease;
+    }
+}
+
+#booking-form form button:hover {
+    background-color: beige;
+    color: #001a56;
+}

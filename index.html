@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eden Estates& Resort―—A Slice of Heaven</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="shortcut icon" href="images/emblem.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <img src="images/emblem.png" alt="Eden_Logo" id="logo">
+        <div class="nav-bar"><ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Portfolio</li>
+            <li>Contact</li>
+        </ul>
+        </div>
+        <button id="book-now">Book Now</button>
+    </header>
+    <section class="sect-one">
+        <div class="top">
+            <img src="images/restaurant-side.jpg" alt="restaurant-side">
+        </div>
+        <div id="booking-form">
+            <h2>Book Your Stay</h2>
+            <p>Required fields are followed by *</p>
+    
+            <form @submit.prevent="submitReservation">
+                <!-- <label for="name">Name:</label>
+                <input v-model="reservation.name" type="text" id="name" required>
+    
+                <label for="email">Email:</label>
+                <input v-model="reservation.email" type="email" id="email" required> -->
+    
+                <label for="checkin">Check-in Date: *</label>
+                <input v-model="reservation.checkin" type="date" id="checkin" required>
+    
+                <label for="checkout">Check-out Date: *</label>
+                <input v-model="reservation.checkout" type="date" id="checkout" required>
+    
+                <label for="guests">Adults</label>
+                <select v-model="reservation.guests" id="guests" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <button type="submit">Submit Reservation</button>
+            </form>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script src="scripts/booking-form.js"></script>
+    </section>
+    <footer class="footer">
+        <div class="addrs">
+            <ul>
+                <h2>Eden Estates & Resort</h2>
+                <p>A Slice of Heaven―©2024</p>
+                <li><b>Head Office:</b> Old-Airport Road, S117, Lilongwe</li>
+                <li>Malawi, Africa</li>
+            </ul>
+        </div>
+        <div class="f-content">
+            <ul>
+                <h2>Contacts:</h2>
+                <li><a href="mailto:info@edenestatesmw.com">Send Us an Email</a></li>
+                <li><a href="tel:+265984222332">Call</a>―<a href="https://wa.me/+265984222331">WhatsApp</a></li>
+            </ul>
+        </div>
+        <div class="f-content">
+            <ul>
+                <h2>Policies:</h2>
+                <li><a href="#">Bookings/Cancellation</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="f-content">
+            <br><br><br><br><br><br>
+            <span>
+                Designed by <a href="#">81PIXELS</a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
