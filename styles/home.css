@@ -82,3 +82,58 @@
     background-color: beige;
     color: #001a56;
 }
+
+.sect-two {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.sect-two span {
+    display: block;
+    padding-left: 80px;
+    padding-top: 50px;
+}
+
+.sect-two span h1 {
+    text-transform: uppercase;
+    font-size: 70px;
+    font-weight: 550;
+    letter-spacing: 2px;
+}
+
+.sect-two span p {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+#explore {
+    margin-top: 20px;
+    padding: 10px 20px;
+    letter-spacing: 10px;
+    font-size: 15px;
+    border: none;
+    background-color: #001a56;
+    color: beige;
+    transition: transform 0.3s ease;
+}
+
+#explore:hover {
+    transform: scale(1.1);
+}
+
+.side-img-cont {
+    width: 50%;
+    height: 700px;
+    background-image: url(../images/welcome-side.JPG);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 1500px;
+    margin-top: 10px;
+    margin-left: 10px;
+    transition: background-size 0.5s ease;
+}
+
+.side-img-cont:hover {
+    background-size: 1300px;
+}
