@@ -44,9 +44,11 @@ body {
     margin-right: 350px;
     right: 0;
     z-index: 450;
-    li {
+    li a {
+        color: #001a56;
         margin-right: 40px;
         flex-wrap: row wrap;
+        text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 3px;
         font-size: 16px;
@@ -54,7 +56,7 @@ body {
     }
 }
 
-.nav-bar li:hover {
+.nav-bar li a:hover {
     color: #d0ee3a;
 }
 
