@@ -177,3 +177,7 @@ body {
 #wa-me img:hover {
     transform: scale(1.3);
 }
+
+.f-content li img {
+    filter: invert(100%);
+}
