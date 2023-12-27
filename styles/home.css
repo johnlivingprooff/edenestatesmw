@@ -137,3 +137,96 @@
 .side-img-cont:hover {
     background-size: 1300px;
 }
+
+.sect-four {
+    display: flex;
+    flex-direction: row;
+    background-repeat: no-repeat;
+    background-image: url(../images/sect-four.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.acc-box {
+    margin-left: 50px;
+    margin-top: 35px;
+    margin-bottom: 30px;
+    display: block;
+    border: #dce3c8 solid 1px;
+    border-radius: 4px;
+    padding: 10px;
+    padding-bottom: 15px;
+    transition: transform 0.3s ease;
+    background-color: rgb(255, 255, 255);
+}
+
+.acc-box img {
+    width: 450px;
+    margin: -12px;
+}
+
+.acc-box h3 {
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+    margin-top: 45px;
+    color: #464646;
+    padding-left: 25px;
+}
+
+.acc-box p {
+    margin-top: 25px;
+    font-size: 15px;
+    font-style: italic;
+    padding-left: 25px;
+    text-align: justify;
+}
+
+.acc-box h4 {
+    font-size: 15px;
+    margin-top: 25px;
+    padding-left: 25px;
+    font-weight: 250;
+    text-transform: uppercase;
+    b {
+        font-size: 25px;
+        font-style: italic;
+        text-transform: lowercase;
+        color: #464646;
+    }
+}
+
+.acc-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 100px rgba(20, 20, 39, 0.336);
+}
+
+#book-now-room {
+    float: right;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    padding-top: 4px;
+    position: relative;
+    font-size: 17px;
+    color: beige;
+    background-color: #001a56;
+    border: none;
+    margin-top: -50px;
+    margin-right: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.4s ease;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+#book-now-room:hover {
+    background-color: beige;
+    color: #001a56;
+    transform: scale(1.08);
+}
