@@ -151,7 +151,7 @@ body {
 
 .f-content span {
     font-size: 14px;
-    margin-left: 250px;
+    margin-left: -100px;
     padding-top: 150px;
     a {
         color: #d5cdd4;
