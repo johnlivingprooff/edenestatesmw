@@ -10,9 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 <body>
-    <header class="header">
+    <header class="section header">
         <img src="images/emblem.png" alt="Eden_Logo" id="logo">
         <div class="nav-bar"><ul>
             <li>Home</li>
@@ -23,7 +24,7 @@
         </div>
         <button id="book-now">Book Now</button>
     </header>
-    <section class="sect-one">
+    <section class="section sect-one">
         <div class="top">
             <img src="images/restaurant-side.jpg" alt="restaurant-side">
         </div>
@@ -52,13 +53,12 @@
                     <option value="4">4</option>
                     <!-- Add more options as needed -->
                 </select>
-                <button type="submit">Submit Reservation</button>
+                <button type="submit">See options</button>
             </form>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
         <script src="scripts/booking-form.js"></script>
     </section>
-    <section class="sect-two">
+    <section class="section sect-two">
         <div class="side-img-cont">
             <!-- <img src="images/welcome-side.JPG" alt="WELCOME"> -->
         </div>
@@ -71,33 +71,65 @@
             <button id="explore">EXPLORE</button>
         </span>
     </section>
-    <section class="sect-four">
+    <!-- accommodation options -->
+    <section class="section sect-four"> 
         <div class="acc-box">
             <img src="images/deluxe-lamp.jpg" alt="Deluxe Room">
-            <h3>Deluxe Rooms</h3>
+            <h3>standard <br>Deluxe Rooms</h3>
             <p>High-ceilinged and well-polished continental rooms. <br>
                 Suitable for Romantic Getaways, and leisure retreats</p>
             <h4>From: <br><b>$95 per night</b></h4>
             <button id="book-now-room">Book Now</button>
         </div>
         <div class="acc-box">
-            <img src="images/deluxe-lamp.jpg" alt="Deluxe Room">
-            <h3>Family Cottages</h3>
+            <img src="images/cottage-veranda.JPG" alt="Deluxe Room">
+            <h3>Two-bedroom <br>Family Cottages</h3>
             <p>Fully furnished and serviced 2-bedroom homes. <br>
                 Suitable for all family gateways and team retreats.</p>
-            <h4>From: <br><b>$95 per night</b></h4>
+            <h4>Price: <br><b>$170 per night</b></h4>
             <button id="book-now-room">Book Now</button>
         </div>
         <div class="acc-box">
-            <img src="images/deluxe-lamp.jpg" alt="Deluxe Room">
+            <img src="images/apartment-two.JPG" alt="Deluxe Room">
             <h3>Studio-loft <br>Apartments</h3>
             <p>Fully furnished and serviced studio loft apartment. <br>
                 Suitable for a relaxation or work getaway.</p>
-            <h4>From: <br><b>$95 per night</b></h4>
+            <h4>From: <br><b>$110 per night</b></h4>
             <button id="book-now-room">Book Now</button>
         </div>
     </section>
-    <footer class="footer">
+    <section class="section sect-three">
+        <div></div>
+    </section>
+    <section class="section sect-five">
+        <div id="contact-form">
+            <h2>Contact Us</h2>
+
+            <form @submit.prevent="submitForm">
+                <!-- <label for="name">Name:</label> -->
+                <input v-model="contactInfo.name" placeholder="Your Name" type="text" id="name" required>
+                <br>
+                <!-- <label for="email">Email:</label> -->
+                <input v-model="contactInfo.phone" placeholder="Phone" type="phone" id="phone" required>
+                <!-- <br> -->
+                <input v-model="contactInfo.email" placeholder="Your Email" type="email" id="email" required>
+                <br><br><br>
+                <label for="message">Leave Your Message:</label>
+                <br><br>
+                <textarea v-model="contactInfo.message" id="message" rows="4" required></textarea>
+                <br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <script src="scripts/contact-form.js"></script>
+        <div class="side-img-form"></div>
+    </section>
+    <div class="section" id="wa-me">
+        <a href="https://wa.me/+265984222331" target="_blank">
+            <img src="images/whatsapp-round-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+    <footer class="section footer">
         <div class="addrs">
             <ul>
                 <h2>Eden Estates & Resort</h2>
@@ -121,11 +153,29 @@
             </ul>
         </div>
         <div class="f-content">
+            <ul>
+                <h2>Socials</h2>
+                <li><a href="#">
+                    <img src="images/Facebook Round Black Icon.svg" alt="" width="20px" height="20px">
+                </a>
+                <a href="#">
+                    <img src="images/instagram.png" alt="instagram-logo" width="20px" height="20px">
+                </a>
+                <a href="#">
+                    <img src="images/linkedin_black_logo_icon_147114.png" alt="linkedin-logo" width="20px" height="20px">
+                </a>
+                <a href="#">
+                    <img src="images/x-social-media-round-icon.png" alt="x-logo" width="20px" height="20px">
+                </a></li>
+            </ul>
+        </div>
+        <div class="f-content">
             <br><br><br><br><br><br>
             <span>
                 Designed by <a href="#">81PIXELS</a>
             </span>
         </div>
     </footer>
+    <script src="scripts/full-page-animate.js"></script>
 </body>
 </html>
