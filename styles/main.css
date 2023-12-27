@@ -165,7 +165,7 @@ body {
 
 #wa-me {
     right: 50px;
-    bottom: 5%;
+    bottom: 0;
     position: fixed;
     z-index: 10000;
 }
