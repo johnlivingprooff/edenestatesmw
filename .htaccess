@@ -13,3 +13,6 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 # pages with '.html' are displayed in browser
 
 RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Redirect index.html to the root domain
+RewriteRule ^index\.html$ http://one.edenestatesmw.com/ [R=301,L]
