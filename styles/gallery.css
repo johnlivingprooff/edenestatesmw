@@ -34,3 +34,79 @@
     margin-top: 35px;
 }
 
+.sect-two {
+    display: flex;
+    flex-direction: row;
+}
+
+.sect-two h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.sect-two span {
+    display: block;
+    margin-top: 15px;
+    padding-left: 100px;
+}
+
+.sect-two p {
+    text-align: left;
+    font-size: 14px;
+    padding-right: 100px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.img-cont {
+    max-width: 50%;
+    overflow: hidden;
+    margin: 0 25px;
+    place-items: center;
+    display: grid;
+    position: relative;
+}
+
+.slide {
+    display: flex;
+    animation: slide 90s linear infinite;
+    width: calc(20 * 800px);
+}
+
+.slide:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.img-cont img {
+    padding-left: 10px;
+    width: 800px;
+    height: 600px;
+}
+
+.sect-two button {
+    margin-top: 50px;
+    font-size: 25px;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #001a56;
+    border: none;
+    color: beige;
+    transition: all 0.3s ease-in-out;
+}
+
+.sect-two button:hover {
+    background-color: beige;
+    color: #001a56;
+    transform: scale(1.05);
+}

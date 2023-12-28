@@ -28,7 +28,73 @@
         <h1>Gallery</h1>
         <p>―The most Beautiful, indigenous Landscape in the City―</p>
     </section>
-    
+    <section class="section sect-two">
+        <div class="img-cont">
+            <div class="slide">
+            <img src="images/apartments/001.JPG" alt="apartments">
+            <img src="images/deluxe/001.jpg" alt="deluxe-room">
+            <img src="images/apartment-lounge-two.jpg" alt="apartments">
+            <img src="images/house-three.jpg" alt="cottages">
+            <img src="images/cottages/007.jpg" alt="cottages">
+            <img src="images/apartments/004.JPG" alt="apartments">
+            <img src="images/apartments/007.JPG" alt="apartments">
+
+            <img src="images/deluxe/005.jpg" alt="deluxe-room">
+            <img src="images/deluxe/002.jpg" alt="deluxe-room">
+            <img src="images/deluxe/004.jpg" alt="deluxe-room">
+            <img src="images/apartments/002.JPG" alt="apartments">
+            <img src="images/deluxe/003.jpg" alt="deluxe-room">
+            <img src="images/cottages/006.jpg" alt="cottages">
+            
+            <img src="images/cottages/001.jpg" alt="cottages">
+            <img src="images/apartments/006.JPG" alt="apartments">
+            <img src="images/cottages/002.jpg" alt="cottages">
+            <img src="images/cottages/003.jpg" alt="cottages">
+            <img src="images/apartments/004.JPG" alt="apartments">
+            <img src="images/deluxe/006.jpg" alt="deluxe-room">
+            <img src="images/cottages/005.jpg" alt="cottages">
+
+            <img src="images/apartment-two.JPG" alt="apartments">
+            <img src="images/apartments/002.JPG" alt="apartments">
+            <img src="images/deluxe/003.jpg" alt="deluxe-room">
+            <img src="images/cottages/006.jpg" alt="cottages">
+            </div>
+        </div>
+        <span>
+        <h2>Explore Our <br>Luxurious Accommodations</h2>
+        <p>Indulge in luxury at Eden Estates with our Deluxe Rooms—sanctuaries of <br>tranquility
+            and sophistication. Elevate your experience in our spacious <br>Studio-Loft Apartments,
+            offering panoramic views and modern living spaces. <br>For family getaways, our Family-Friendly
+            Suites ensure a perfect blend of comfort and convenience. Make every stay
+            extraordinary at Eden Estates & Resort.</p>
+        <button>Book Now</button>
+        </span>
+        <br>
+    </section>
+
+    <section class="section sect-contact">
+        <div id="contact-form">
+            <h2>Contact Us</h2>
+
+            <form @submit.prevent="submitForm">
+                <!-- <label for="name">Name:</label> -->
+                <input v-model="contactInfo.name" placeholder="Your Name" type="text" id="name" required>
+                <br>
+                <!-- <label for="email">Email:</label> -->
+                <input v-model="contactInfo.phone" placeholder="Phone" type="phone" id="phone" required>
+                <!-- <br> -->
+                <input v-model="contactInfo.email" placeholder="Your Email" type="email" id="email" required>
+                <br><br><br>
+                <label for="message">Leave Your Message:</label>
+                <br><br>
+                <textarea v-model="contactInfo.message" id="message" rows="4" required></textarea>
+                <br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <script src="scripts/contact-form.js"></script>
+        <div class="side-img-form"></div>
+    </section>
     <div class="section" id="wa-me">
         <a href="https://wa.me/+265984222331" target="_blank">
             <img src="images/whatsapp-round-icon.png" alt="WhatsApp">
