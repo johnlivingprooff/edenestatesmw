@@ -7,9 +7,9 @@
 
 .img-title-cont {
     width: 100%;
-    background-image: url(../images/slice-of-heaven.jpg);
+    background-image: url(../images/about-main.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     background-attachment: fixed;
     h1 {
