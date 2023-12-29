@@ -38,18 +38,19 @@
                     <label for="email">Email:</label>
                     <input v-model="reservation.email" type="email" id="email" required> -->
         
-                    <label for="checkin">Check-in Date: *</label>
+                    <label for="checkin">Check-in Date: *</label><br>
                     <input v-model="reservation.checkin" type="date" id="checkin" required>
-        
-                    <label for="checkout">Check-out Date: *</label>
+                        <br>
+                    <label for="checkout">Check-out Date: *</label><br>
                     <input v-model="reservation.checkout" type="date" id="checkout" required>
-        
-                    <label for="guests">No. of guests *</label>
+                        <br>
+                    <label for="guests">No. of guests *</label><br>
                     <select v-model="reservation.guests" id="guests" required>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
+                        <option value="5">5</option>
                         <!-- Add more options as needed -->
                     </select>
                     <button type="submit">See options</button>
