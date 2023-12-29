@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery ― Eden Estate</title>
+    <!-- Written by John-Livngprooff -->
+    <title>Eden Estates& Resort―A Slice of Heaven</title>
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/gallery.css">
+    <link rel="stylesheet" href="./styles/home.css">
     <link rel="shortcut icon" href="images/emblem.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,86 +28,82 @@
         </a>
     </header>
     <section class="section sect-one">
-        <h1>Gallery</h1>
-        <p>―The most Beautiful, indigenous Landscape in the City―</p>
-    </section>
-    <section class="section sect-two">
-        <div class="img-cont">
-            <div class="slide">
-            <img src="images/apartments/001.JPG" alt="apartments">
-            <img src="images/deluxe/001.jpg" alt="deluxe-room">
-            <img src="images/apartment-lounge-two.jpg" alt="apartments">
-            <img src="images/house-three.jpg" alt="cottages">
-            <img src="images/cottages/007.jpg" alt="cottages">
-            <img src="images/apartments/004.JPG" alt="apartments">
-            <img src="images/apartments/007.JPG" alt="apartments">
-
-            <img src="images/deluxe/005.jpg" alt="deluxe-room">
-            <img src="images/deluxe/002.jpg" alt="deluxe-room">
-            <img src="images/deluxe/004.jpg" alt="deluxe-room">
-            <img src="images/apartments/002.JPG" alt="apartments">
-            <img src="images/deluxe/003.jpg" alt="deluxe-room">
-            <img src="images/cottages/006.jpg" alt="cottages">
-            
-            <img src="images/cottages/001.jpg" alt="cottages">
-            <img src="images/apartments/006.JPG" alt="apartments">
-            <img src="images/cottages/002.jpg" alt="cottages">
-            <img src="images/cottages/003.jpg" alt="cottages">
-            <img src="images/apartments/004.JPG" alt="apartments">
-            <img src="images/deluxe/006.jpg" alt="deluxe-room">
-            <img src="images/cottages/005.jpg" alt="cottages">
-
-            <img src="images/apartment-two.JPG" alt="apartments">
-            <img src="images/apartments/002.JPG" alt="apartments">
-            <img src="images/deluxe/003.jpg" alt="deluxe-room">
-            <img src="images/cottages/006.jpg" alt="cottages">
+        <div class="top">
+            <div id="booking-form">
+                <h2>Book Your Stay</h2>
+                <p>Required fields are followed by *</p>
+        
+                <form @submit.prevent="submitReservation">
+                    <!-- <label for="name">Name:</label>
+                    <input v-model="reservation.name" type="text" id="name" required>
+        
+                    <label for="email">Email:</label>
+                    <input v-model="reservation.email" type="email" id="email" required> -->
+        
+                    <label for="checkin">Check-in Date: *</label><br>
+                    <input v-model="reservation.checkin" type="date" id="checkin" required>
+                        <br>
+                    <label for="checkout">Check-out Date: *</label><br>
+                    <input v-model="reservation.checkout" type="date" id="checkout" required>
+                        <br>
+                    <label for="guests">No. of guests *</label><br>
+                    <select v-model="reservation.guests" id="guests" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <button type="submit">See options</button>
+                </form>
             </div>
         </div>
+        <script src="scripts/booking-form.js"></script>
+    </section>
+    <section class="section sect-two">
+        <div class="side-img-cont">
+            <!-- <img src="images/welcome-side.JPG" alt="WELCOME"> -->
+        </div>
         <span>
-        <h2>Explore Our <br>Luxurious Rooms</h2>
-        <p>Indulge in luxury at Eden Estates with our Deluxe Rooms—sanctuaries of tranquility
-            and sophistication. Elevate your experience in our spacious Studio-Loft Apartments,
-            offering panoramic views and modern living spaces. For family getaways, our Family-Friendly
-            Suites ensure a perfect blend of comfort and convenience. Make every stay
-            extraordinary at Eden Estates & Resort.</p>
-        <button>Book Now</button>
+            <h1>WELCOME TO<br>Eden Estate & Resort</h1>
+            <p>We are an eco-tourism environment located on <br>
+                the outskirts of Lilongwe City, that allows patrons <br>
+                to enjoy the tranquillity of Nature, and a <br>
+                peaceful getaway without having to leave the city.</p>
+            <button id="explore"><a href="gallery">EXPLORE</a></button>
         </span>
-        <br>
     </section>
-
-    <section class="gallery">
-        <img src="images/apartment-main-lounge.jpg" alt="gallery-img">
-        <img src="images/house-three.jpg" alt="gallery-img">
-        <img src="images/chef-bbq.jpg" alt="gallery-img">
-        <img src="images/_HM85323.JPG" alt="gallery-img">
-        <video src="videos/natureEEL-Reel3.mp4" autoplay muted loop></video>
-        <img src="images/81PX00311.jpg" alt="gallery-img">
-        <img src="images/81PX00291.jpg" alt="gallery-img">
-        <img src="images/apartment-lounge-two.jpg" alt="gallery-img">
-        <img src="images/ducks-in-pond.jpg" alt="gallery-img">
-        <img src="images/outdoor-lit.jpg" alt="gallery-img">
-        <video loop src="videos/Reel.mp4" autoplay muted></video>
-        <img src="images/81PX00661.jpg" alt="gallery-img">
-        <img src="images/deck-ls.JPG" alt="pool-deck">
-        <img src="images/slice-of-pie.jpg" alt="gallery-img">
-        <video autoplay muted loop src="videos/gentle-light-reel.mp4"></video>
-        <img src="images/cottage-veranda.JPG" alt="gallery-img">
-        <img src="images/wedding.jpg" alt="gallery-img">
-        <img src="images/_HM85332.JPG" alt="gallery-img">
-        <img src="images/slice-of-heaven.JPG" alt="gallery-img">
-        <img src="images/81PX00148.jpg" alt="gallery-img">
-        <img src="images/slicees.jpg" alt="gallery-img">
-        <img src="images/81PX00155.jpg" alt="gallery-img">
-        <video src="videos/Reel2.mp4" autoplay muted loop></video>
-        <img src="images/81PX00146.jpg" alt="gallery-img">
-        <img src="images/about-one.jpg" alt="gallery-img">
-        <img src="images/81PX00287.jpg" alt="gallery-img">
-        <img src="images/apartment-back -two.jpg" alt="gallery-img">
-        <img src="images/81PX0415.jpg" alt="gallery-img">
-        <img src="images/food-one.JPG" alt="gallery-img">
-        <img src="images/81PX00647.jpg" alt="gallery-img">
+    <!-- accommodation options -->
+    <section class="section sect-four"> 
+        <div class="acc-box">
+            <img src="images/deluxe-lamp.jpg" alt="Deluxe Room">
+            <h3>standard <br>Deluxe Rooms</h3>
+            <p>High-ceilinged and well-polished continental rooms. <br>
+                Suitable for Romantic Getaways, and leisure retreats</p>
+            <h4>From: <br><b>$95 per night</b></h4>
+            <button id="book-now-room" >Book Now</button>
+        </div>
+        <div class="acc-box">
+            <img src="images/cottage-veranda.JPG" alt="Deluxe Room">
+            <h3>Two-bedroom <br>Family Cottages</h3>
+            <p>Fully furnished and serviced 2-bedroom homes. <br>
+                Suitable for all family gateways and team retreats.</p>
+            <h4>Price: <br><b>$170 per night</b></h4>
+            <button id="book-now-room">Book Now</button>
+        </div>
+        <div class="acc-box">
+            <img src="images/apartment-two.JPG" alt="Deluxe Room">
+            <h3>Studio-loft <br>Apartments</h3>
+            <p>Fully furnished and serviced studio loft apartment. <br>
+                Suitable for a relaxation or work getaway.</p>
+            <h4>From: <br><b>$110 per night</b></h4>
+            <button id="book-now-room">Book Now</button>
+        </div>
     </section>
-
+    <section class="section sect-three">
+        <div></div>
+    </section>
     <section class="section sect-contact">
         <div id="contact-form">
             <h2>Contact Us</h2>
@@ -174,7 +171,7 @@
                     <img src="images/x-social-media-round-icon.png" alt="x-logo" width="20px" height="20px">
                 </a></li>
                 <li><br>
-                Designed by <a href="https://github.com/johnlivingprooff" target="_blank">81PIXELS</a>
+                    Designed by <a href="https://github.com/johnlivingprooff" target="_blank">81PIXELS</a>
                 </li>
             </ul>
         </div>
