@@ -29,6 +29,7 @@
         margin-top: 10px;
         margin-left: 5%;
         position: absolute;
+        z-index: 8000;
     }
 
     #logo:hover {
@@ -135,6 +136,7 @@
     .eite-one {
         margin-bottom: 20px;
         margin-left: 45px;
+        position: absolute;
     }
 
     .eite-one span {
@@ -175,7 +177,7 @@
     #contact-form {
         display: block;
         margin: 25px;
-        width: 850px;
+        width: 100%;
         h2 {
             font-size: 25px;
             text-transform: uppercase;

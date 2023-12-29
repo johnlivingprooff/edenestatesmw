@@ -226,10 +226,10 @@
     }
 
     .sect-three {
-        background-image: url(../images/the-grid-ls.jpg);
+        background-image: url(../images/the-grid@0.5x.png);
         background-attachment: fixed;
         background-size: cover;
-
+        background-position: center;
     }
 
     .sect-three div {

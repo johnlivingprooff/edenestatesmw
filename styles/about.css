@@ -1,93 +1,295 @@
-.sect-six {
-    justify-content: center;
-    display: flex;
-    width: 100%;
-    height: 80vh;
-}
+/* Desktop viewport */
+@media only screen and (min-width: 800px) {
+    .sect-six {
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        height: 90vh;
+    }
 
-.img-title-cont {
-    width: 100%;
-    background-image: url(../images/about-main.jpg);
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
-    background-attachment: fixed;
-    h1 {
-        font-size: 150px;
-        color: rgb(255, 255, 255);
-        text-transform: uppercase;
-        text-align: center;
-        letter-spacing: 10px;
-        text-shadow: 0 0 100px #000000;
+    .img-title-cont {
+        width: 100%;
+        background-image: url(../images/about-main.jpg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        background-attachment: fixed;
+        h1 {
+            padding: 25px 15px;
+            font-size: 150px;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 10px;
+            text-shadow: 0 0 100px #000000;
+        }
+    }
+
+    .sect-seven {
+        margin-top: 100px;
+        display: block;
+        h2 {
+            margin-bottom: 0;
+            font-size: 35px;
+            font-weight: 1000;
+            letter-spacing: 9px;
+            color: #001a56;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        hr {
+            width: 70px;
+            color: #585858;
+        }
+        p {
+            margin: 15px 150px 25px 150px;
+            text-align: center;
+            line-height: 30px;
+        }
+    }
+
+    .slider {
+        margin: auto;
+        height: 400px;
+        width: 90%;
+        place-items: center;
+        display: grid;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slide-track {
+        display: flex;
+        width: calc(16 * 400px);
+        animation: scroll 40s linear infinite;
+    }
+
+    .slide-track:hover {
+        animation-play-state: paused;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-400px * 8));
+        }
+    }
+
+    .slide {
+        height: 200px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        perspective: 100px;
+    }
+
+    .slide img {
+        width: 100%;
+        transition: transform 1s;
+    }
+
+    .slide img:hover {
+        transform: translateZ(5px);
     }
 }
 
-.sect-seven {
-    display: block;
-    h2 {
-        margin-bottom: 0;
-        font-size: 35px;
-        font-weight: 1000;
-        letter-spacing: 9px;
-        color: #001a56;
-        text-transform: uppercase;
-        text-align: center;
+/* Mobile viewport */
+@media only screen and (max-width: 799px) {
+    .sect-six {
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        height: 80vh;
     }
-    hr {
-        width: 70px;
-        color: #585858;
+
+    .img-title-cont {
+        width: 100%;
+        background-image: url(../images/about-main.jpg);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+        background-attachment: fixed;
+        h1 {
+            padding-top: 50px;
+            font-size: 100px;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 10px;
+            text-shadow: 0 0 100px #000000;
+        }
     }
-    p {
-        margin: 15px 350px 25px 350px;
-        text-align: center;
-        line-height: 30px;
+
+    .sect-seven {
+        display: block;
+        margin-top: 30px;
+        h2 {
+            margin-bottom: 0;
+            font-size: 45px;
+            font-weight: 1000;
+            letter-spacing: 9px;
+            color: #001a56;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        hr {
+            width: 70px;
+            color: #585858;
+        }
+        p {
+            text-align: center;
+            line-height: 30px;
+            padding: 0 70px;
+        }
+    }
+
+    .slider {
+        margin: auto;
+        height: 400px;
+        width: 90%;
+        place-items: center;
+        display: grid;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slide-track {
+        display: flex;
+        width: calc(16 * 400px);
+        animation: scroll 40s linear infinite;
+    }
+
+    .slide-track:hover {
+        animation-play-state: paused;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-400px * 8));
+        }
+    }
+
+    .slide {
+        height: 200px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        perspective: 100px;
+    }
+
+    .slide img {
+        width: 100%;
+        transition: transform 1s;
+    }
+
+    .slide img:hover {
+        transform: translateZ(5px);
     }
 }
 
-.slider {
-    margin: auto;
-    height: 400px;
-    width: 90%;
-    place-items: center;
-    display: grid;
-    position: relative;
-    overflow: hidden;
-}
-
-.slide-track {
-    display: flex;
-    width: calc(16 * 400px);
-    animation: scroll 40s linear infinite;
-}
-
-.slide-track:hover {
-    animation-play-state: paused;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
+/* Mobile viewport */
+@media only screen and (max-width: 500px) {
+    .sect-six {
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        height: 20vh;
     }
-    100% {
-        transform: translateX(calc(-400px * 8));
+
+    .img-title-cont {
+        width: 100%;
+        background-image: url(../images/slice-of-heaven.JPG);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+        background-attachment: fixed;
+        h1 {
+            padding-top: 50px;
+            font-size: 25px;
+            font-weight: 700;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: 5px;
+            text-shadow: 0 0 100px #000000;
+        }
+    }
+
+    .sect-seven {
+        display: block;
+        margin-top: 30px;
+        h2 {
+            margin-bottom: 0;
+            font-size: 25px;
+            font-weight: 1000;
+            letter-spacing: 9px;
+            color: #001a56;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        hr {
+            width: 70px;
+            color: #585858;
+        }
+        p {
+            text-align: justify;
+            line-height: 25px;
+            padding: 0 45px;
+            font-size: 12px;
+        }
+    }
+
+    .slider {
+        margin: auto;
+        height: 400px;
+        width: 90%;
+        place-items: center;
+        display: grid;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slide-track {
+        display: flex;
+        width: calc(16 * 400px);
+        animation: scroll 40s linear infinite;
+    }
+
+    .slide-track:hover {
+        animation-play-state: paused;
+    }
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-400px * 8));
+        }
+    }
+
+    .slide {
+        height: 200px;
+        width: 400px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        perspective: 100px;
+    }
+
+    .slide img {
+        width: 100%;
+        transition: transform 1s;
+    }
+
+    .slide img:hover {
+        transform: translateZ(5px);
     }
 }
-
-.slide {
-    height: 200px;
-    width: 400px;
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    perspective: 100px;
-}
-
-.slide img {
-    width: 100%;
-    transition: transform 1s;
-}
-
-.slide img:hover {
-    transform: translateZ(5px);
-}
-
