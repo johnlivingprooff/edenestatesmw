@@ -27,35 +27,34 @@
     </header>
     <section class="section sect-one">
         <div class="top">
-            <img src="images/restaurant-side.jpg" alt="restaurant-side">
-        </div>
-        <div id="booking-form">
-            <h2>Book Your Stay</h2>
-            <p>Required fields are followed by *</p>
-    
-            <form @submit.prevent="submitReservation">
-                <!-- <label for="name">Name:</label>
-                <input v-model="reservation.name" type="text" id="name" required>
-    
-                <label for="email">Email:</label>
-                <input v-model="reservation.email" type="email" id="email" required> -->
-    
-                <label for="checkin">Check-in Date: *</label>
-                <input v-model="reservation.checkin" type="date" id="checkin" required>
-    
-                <label for="checkout">Check-out Date: *</label>
-                <input v-model="reservation.checkout" type="date" id="checkout" required>
-    
-                <label for="guests">No. of guests *</label>
-                <select v-model="reservation.guests" id="guests" required>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <!-- Add more options as needed -->
-                </select>
-                <button type="submit">See options</button>
-            </form>
+            <div id="booking-form">
+                <h2>Book Your Stay</h2>
+                <p>Required fields are followed by *</p>
+        
+                <form @submit.prevent="submitReservation">
+                    <!-- <label for="name">Name:</label>
+                    <input v-model="reservation.name" type="text" id="name" required>
+        
+                    <label for="email">Email:</label>
+                    <input v-model="reservation.email" type="email" id="email" required> -->
+        
+                    <label for="checkin">Check-in Date: *</label>
+                    <input v-model="reservation.checkin" type="date" id="checkin" required>
+        
+                    <label for="checkout">Check-out Date: *</label>
+                    <input v-model="reservation.checkout" type="date" id="checkout" required>
+        
+                    <label for="guests">No. of guests *</label>
+                    <select v-model="reservation.guests" id="guests" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                    <button type="submit">See options</button>
+                </form>
+            </div>
         </div>
         <script src="scripts/booking-form.js"></script>
     </section>
@@ -69,7 +68,7 @@
                 the outskirts of Lilongwe City, that allows patrons <br>
                 to enjoy the tranquillity of Nature, and a <br>
                 peaceful getaway without having to leave the city.</p>
-            <button id="explore">EXPLORE</button>
+            <button id="explore"><a href="gallery">EXPLORE</a></button>
         </span>
     </section>
     <!-- accommodation options -->
@@ -80,7 +79,7 @@
             <p>High-ceilinged and well-polished continental rooms. <br>
                 Suitable for Romantic Getaways, and leisure retreats</p>
             <h4>From: <br><b>$95 per night</b></h4>
-            <button id="book-now-room">Book Now</button>
+            <button id="book-now-room" >Book Now</button>
         </div>
         <div class="acc-box">
             <img src="images/cottage-veranda.JPG" alt="Deluxe Room">
@@ -170,8 +169,8 @@
                 </a></li>
             </ul>
         </div>
-        <div class="f-content">
-            <br><br><br><br><br><br>
+        <div class="eite-one">
+            <br>
             <span>
                 Designed by <a href="https://github.com/johnlivingprooff" target="_blank">81PIXELS</a>
             </span>
