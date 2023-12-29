@@ -133,23 +133,6 @@
         color: #d9ee72;
     }
 
-    .eite-one {
-        margin-bottom: 20px;
-        margin-left: 45px;
-        position: absolute;
-    }
-
-    .eite-one span {
-        font-size: 14px;
-        a {
-            color: #d5cdd4;
-        }
-    }
-
-    .eite-one span a:hover {
-        color: #d9ee72;
-    }
-
     #wa-me {
         right: 10px;
         bottom: 0;
@@ -389,18 +372,6 @@
     }
 
     .f-content ul li a:hover {
-        color: #d9ee72;
-    }
-
-    .eite-one span {
-        font-size: 14px;
-        margin-left: -100px;
-        a {
-            color: #d5cdd4;
-        }
-    }
-
-    .eite-one span a:hover {
         color: #d9ee72;
     }
 
