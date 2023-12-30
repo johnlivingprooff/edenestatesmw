@@ -6,7 +6,7 @@
     <!-- Written by John-Livngprooff -->
     <title>Eden Estates& Resort―A Slice of Heaven</title>
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/booking.css">
     <link rel="shortcut icon" href="images/emblem.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,104 +28,40 @@
         </a>
     </header>
     <section class="section sect-one">
-        <div class="top">
-            <div id="booking-form">
-                <h2>Book Your Stay</h2>
-                <p>Required fields are followed by *</p>
-        
-                <form @submit.prevent="submitReservation">
-                    <!-- <label for="name">Name:</label>
-                    <input v-model="reservation.name" type="text" id="name" required>
-        
-                    <label for="email">Email:</label>
-                    <input v-model="reservation.email" type="email" id="email" required> -->
-        
-                    <label for="checkin">Check-in Date: *</label><br>
-                    <input v-model="reservation.checkin" type="date" id="checkin" required>
-                        <br>
-                    <label for="checkout">Check-out Date: *</label><br>
-                    <input v-model="reservation.checkout" type="date" id="checkout" required>
-                        <br>
-                    <label for="guests">No. of guests *</label><br>
-                    <select v-model="reservation.guests" id="guests" required>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <!-- Add more options as needed -->
-                    </select>
-                    <button type="submit">See options</button>
-                </form>
-            </div>
-        </div>
-        <script src="scripts/booking-form.js"></script>
+        <h2>Book Your Reservation<br>֎↓֎</h2>
     </section>
     <section class="section sect-two">
-        <div class="side-img-cont">
-            <!-- <img src="images/welcome-side.JPG" alt="WELCOME"> -->
-        </div>
-        <span>
-            <h1>WELCOME TO<br>Eden Estate & Resort</h1>
-            <p>We are an eco-tourism environment located on <br>
-                the outskirts of Lilongwe City, that allows patrons <br>
-                to enjoy the tranquillity of Nature, and a <br>
-                peaceful getaway without having to leave the city.</p>
-            <button id="explore"><a href="gallery">EXPLORE</a></button>
-        </span>
-    </section>
-    <!-- accommodation options -->
-    <section class="section sect-four"> 
         <div class="acc-box">
             <img src="images/deluxe-lamp.jpg" alt="Deluxe Room">
-            <h3>standard <br>Deluxe Rooms</h3>
-            <p>High-ceilinged and well-polished continental rooms. <br>
+            <span><h3>standard Deluxe <br>Rooms</h3>
+            <p>High-ceilinged and well-polished continental rooms.
                 Suitable for Romantic Getaways, and leisure retreats</p>
             <h4>From: <br><b>$95 per night</b></h4>
-            <button id="book-now-room" >Book Now</button>
+            <button id="book-now-room" >Book Now</button></span>
         </div>
         <div class="acc-box">
-            <img src="images/cottage-veranda.JPG" alt="Deluxe Room">
-            <h3>Two-bedroom <br>Family Cottages</h3>
-            <p>Fully furnished and serviced 2-bedroom homes. <br>
+            <img src="images/house-three.jpg" alt="Deluxe Room">
+            <span><h3>Two-bedroom<br>Family cottage</h3>
+            <p>Fully furnished and serviced 2-bedroom homes.
                 Suitable for all family gateways and team retreats.</p>
-            <h4>Price: <br><b>$170 per night</b></h4>
-            <button id="book-now-room">Book Now</button>
+            <h4>From: <br><b>$170 per night</b></h4>
+            <button id="book-now-room" >Book Now</button></span>
         </div>
         <div class="acc-box">
-            <img src="images/apartment-two.JPG" alt="Deluxe Room">
-            <h3>Studio-loft <br>Apartments</h3>
-            <p>Fully furnished and serviced studio loft apartment. <br>
+            <img src="images/apartment-main-lounge.jpg" alt="Deluxe Room">
+            <span><h3>Studio-loft<br>Apartments</h3>
+            <p>Fully furnished and serviced studio loft apartment.
                 Suitable for a relaxation or work getaway.</p>
             <h4>From: <br><b>$110 per night</b></h4>
-            <button id="book-now-room">Book Now</button>
+            <button id="book-now-room" >Book Now</button></span>
         </div>
-    </section>
-    <section class="section sect-three">
-        <div></div>
-    </section>
-    <section class="section sect-contact">
-        <div id="contact-form">
-            <h2>Contact Us</h2>
-
-            <form @submit.prevent="submitForm">
-                <!-- <label for="name">Name:</label> -->
-                <input v-model="contactInfo.name" placeholder="Your Name" type="text" id="name" required>
-                <br>
-                <!-- <label for="email">Email:</label> -->
-                <input v-model="contactInfo.phone" placeholder="Phone" type="phone" id="phone" required>
-                <!-- <br> -->
-                <input v-model="contactInfo.email" placeholder="Your Email" type="email" id="email" required>
-                <br><br><br>
-                <label for="message">Leave Your Message:</label>
-                <br><br>
-                <textarea v-model="contactInfo.message" id="message" rows="4" required></textarea>
-                <br><br>
-                <button type="submit">Submit</button>
-            </form>
+        <div class="acc-box">
+            <img src="images/conference-one.jpg" alt="Deluxe Room">
+            <span><h3>conferences/<br>events</h3>
+            <p>Host your Conferences/Meetings, Corporate/Social events in our exclusive venues</p>
+            <h4>From: <br><b>$20 per person</b></h4>
+            <button id="book-now-room" >Book Now</button></span>
         </div>
-        <script src="scripts/contact-form.js"></script>
-        <div class="side-img-form"></div>
     </section>
     <div class="section" id="wa-me">
         <a href="https://wa.me/+265984222331" target="_blank">
