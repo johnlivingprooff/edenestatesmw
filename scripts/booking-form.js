@@ -2,12 +2,10 @@
     new Vue({
         el: '#booking-form',
         components: {
-            Datepicker,
+            Datepicker: vuejsDatepicker,
         },
         data: {
             reservation: {
-                name: '',
-                email: '',
                 checkin: null,
                 checkout: null,
                 guests: '1'
@@ -19,13 +17,11 @@
                 console.log('Reservation submitted:', this.reservation);
                 // Reset the form or perform any other actions after submission
                 this.reservation = {
-                    name: '',
-                    email: '',
                     checkin: null,
                     checkout: null,
                     guests: '1'
                 };
             }
         }
-    });
+    });    
 })

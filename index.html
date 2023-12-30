@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    
 </head>
 <body>
     <header class="section header">
@@ -29,34 +29,7 @@
     </header>
     <section class="section sect-one">
         <div class="top">
-            <div id="booking-form">
-                <h2>Book Your Stay</h2>
-                <p>Required fields are followed by *</p>
-                <script>
-                    import Datepicker from 'vue-datepicker';
-                </script>
-                <form @submit.prevent="submitReservation">
-                    <label for="checkin">Check-in Date: *</label><br>
-                    <datepicker v-model="reservation.checkin" id="checkin" format="yyyy-MM-dd" required></datepicker>
-                    <br>
             
-                    <label for="checkout">Check-out Date: *</label><br>
-                    <datepicker v-model="reservation.checkout" id="checkout" format="yyyy-MM-dd" required></datepicker>
-                    <br>
-            
-                    <label for="guests">No. of guests *</label><br>
-                    <select v-model="reservation.guests" id="guests" required>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <!-- Add more options as needed -->
-                    </select>
-            
-                    <button type="submit">See options</button>
-                </form>
-            </div>
         </div>
         <script src="scripts/booking-form.js"></script>
     </section>
