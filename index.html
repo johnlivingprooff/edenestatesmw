@@ -32,20 +32,18 @@
             <div id="booking-form">
                 <h2>Book Your Stay</h2>
                 <p>Required fields are followed by *</p>
-        
+                <script>
+                    import Datepicker from 'vue-datepicker';
+                </script>
                 <form @submit.prevent="submitReservation">
-                    <!-- <label for="name">Name:</label>
-                    <input v-model="reservation.name" type="text" id="name" required>
-        
-                    <label for="email">Email:</label>
-                    <input v-model="reservation.email" type="email" id="email" required> -->
-        
                     <label for="checkin">Check-in Date: *</label><br>
-                    <input v-model="reservation.checkin" type="date" id="checkin" required>
-                        <br>
+                    <datepicker v-model="reservation.checkin" id="checkin" format="yyyy-MM-dd" required></datepicker>
+                    <br>
+            
                     <label for="checkout">Check-out Date: *</label><br>
-                    <input v-model="reservation.checkout" type="date" id="checkout" required>
-                        <br>
+                    <datepicker v-model="reservation.checkout" id="checkout" format="yyyy-MM-dd" required></datepicker>
+                    <br>
+            
                     <label for="guests">No. of guests *</label><br>
                     <select v-model="reservation.guests" id="guests" required>
                         <option value="1">1</option>
@@ -55,6 +53,7 @@
                         <option value="5">5</option>
                         <!-- Add more options as needed -->
                     </select>
+            
                     <button type="submit">See options</button>
                 </form>
             </div>

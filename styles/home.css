@@ -16,6 +16,7 @@
     }
 
     #booking-form {
+        margin-top: 50px;
         position: absolute;
         left: 5%;
         right: 5%;
@@ -507,6 +508,7 @@
     }
 
     #booking-form {
+        margin-top: 50px;
         position: absolute;
         top: 150px;
         left: 5%;
@@ -532,7 +534,7 @@
             padding-bottom: 10px;
             display: flex;
         }
-        input {
+        datepicker {
             width: 100%;
             padding-top: 15px;
             padding-bottom: 15px;

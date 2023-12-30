@@ -1,12 +1,15 @@
 (function() {
     new Vue({
         el: '#booking-form',
+        components: {
+            Datepicker,
+        },
         data: {
             reservation: {
                 name: '',
                 email: '',
-                checkin: '',
-                checkout: '',
+                checkin: null,
+                checkout: null,
                 guests: '1'
             }
         },
@@ -18,8 +21,8 @@
                 this.reservation = {
                     name: '',
                     email: '',
-                    checkin: '',
-                    checkout: '',
+                    checkin: null,
+                    checkout: null,
                     guests: '1'
                 };
             }
