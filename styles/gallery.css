@@ -117,6 +117,7 @@
         display: flex;
         width: 100%;
         height: auto;
+        overflow: hidden;
         flex-flow: row wrap;
         justify-content: center;
         margin: 25px 0;

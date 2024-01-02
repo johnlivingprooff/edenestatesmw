@@ -4,41 +4,129 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    margin: 250px auto;
+    margin: 50px auto;
 }
 
 .search-box {
     width: 75%;
-    margin-top: 50px;
-    height: 50px;
+    height: 68px;
     border: 1px solid #001a56;
     border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding-left: 2%;
+    margin-top: 100px;
 }
- .form {
-    margin: 0;
+
+form {
+  margin: 1.2% 0.05%;
+  align-items: center;
+  position: relative;
+  outline: none;
  }
 
- .demo-date-picker {
-    display: flex;
-    width: 100%;
-    padding: 0;
-    flex-wrap: wrap;
+form label {
+  padding: 1%;
+}
+
+form input {
+  border: 1px solid #001a56;
+  padding: 1%;
+  width: 17%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+form select {
+  border: 1px solid #001a56;
+  padding: 1%;
+  width: 5%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+form button {
+  margin: 0 25px;
+  font-size: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border: none;
+  background-color: #001a56;
+  color: bisque;
+  transition: all 0.3s ease-in;
+}
+
+form button:hover {
+  transform: scale(1.1);
+  background-color: bisque;
+  color: #001a56;
+}
+
+.sect-one {
+  position: relative;
+  margin: 150px 200px;
+  height: 100vh;
+}
+
+.rooms {
+  position: relative;
+}
+
+.rooms span {
+  position: relative;
+}
+
+.rooms span h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.rooms span h5 {
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.rooms span p {
+  padding: 5px 0;
+  margin: 0;
+  a {
+    color: #001a56;
+    text-decoration: none;
   }
-  
-  .demo-date-picker .block {
-    padding: 30px 0;
-    text-align: center;
-    border-right: solid 1px var(--el-border-color);
-    flex: 1;
+}
+
+.rooms a:hover {
+  color: #908f8f;
+}
+
+.rooms span h4 {
+  font-size: 15px;
+  margin: 2px 0;
+  margin-bottom: 18px;
+  a {
+    font-size: 40px;
+    color: #001a56;
+    text-decoration: none;
   }
-  
-  .demo-date-picker .block:last-child {
-    border-right: none;
-  }
-  
-  .demo-date-picker .demonstration {
-    display: block;
-    color: var(--el-text-color-secondary);
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
+}
+
+.rooms span button {
+  border: none;
+  color: bisque;
+  background-color: #001a56;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+}
+
+.rooms span button:hover {
+  color: #001a56;
+  background-color: bisque;
+}

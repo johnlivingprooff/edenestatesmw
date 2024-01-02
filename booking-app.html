@@ -29,17 +29,47 @@
         </a>
     </header>
     <div class=" section search-container">
-        <div class="search-box" id="app">
-            <el-date-picker
-            v-model="value"
-            type="daterange"
-            range-separator="To"
-            start-placeholder="Start date"
-            end-placeholder="End date"
-            :size="size"
-          />
+        <div class="search-box" id="booker">
+            <form @submit.prevent="submitReservation">
+    
+                <label for="checkin">Check-in*</label>
+                <input v-model="reservation.checkin" type="date" placeholder="Check-in Date" id="checkin" required>
+
+                <label for="checkout">Check-out*</label>
+                <input v-model="reservation.checkout" placeholder="Check-Out Date" type="date" id="checkout" required>
+
+                <label for="guests">Adults</label>
+                <select v-model="reservation.guests" id="guests" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <label for="guests">Kids</label>
+                <select v-model="reservation.guests" id="guests" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <button type="submit">see options</button>
+            </form>
         </div>
     </div>
+    <section class="section sect-one">
+        <div class="section rooms">
+            <span>
+                <h3>Standard Deluxe Room</h3>
+                <h5>Options:</h5>
+                <p><a href="#rooms">Deluxe-Single</a> | <a href="#rooms">Deluxe-Double</a></p>
+                <h4>$<a href="#price">105</a>/Night</h4>
+                <hr width="30%" align="left">
+                <button type="submit">BOOK NOW</button>
+            </span>
+        </div>
+    </section>
     <div class="section" id="wa-me">
         <a href="https://wa.me/+265984222331" target="_blank">
             <img src="images/whatsapp-round-icon.png" alt="WhatsApp">
