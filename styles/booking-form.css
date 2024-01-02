@@ -67,7 +67,7 @@ form button:hover {
 .sect-one {
   position: relative;
   margin: 150px 200px;
-  height: 100vh;
+  height: 110vh;
 }
 
 .rooms {
@@ -94,6 +94,7 @@ form button:hover {
 .rooms span p {
   padding: 5px 0;
   margin: 0;
+  font-style: italic;
   a {
     color: #001a56;
     text-decoration: none;

@@ -63,12 +63,61 @@
             <span>
                 <h3>Standard Deluxe Room</h3>
                 <h5>Options:</h5>
+                <p>Breakfast Included in the Rates</p>
                 <p><a href="#rooms">Deluxe-Single</a> | <a href="#rooms">Deluxe-Double</a></p>
                 <h4>$<a href="#price">105</a>/Night</h4>
                 <hr width="30%" align="left">
                 <button type="submit">BOOK NOW</button>
             </span>
         </div>
+        <br><hr width="65%" align="left">
+        <div class="section rooms">
+            <span>
+                <h3>Studio-loft Apartments</h3>
+                <h5>Options:</h5>
+                <p>Self-Catering | No Breakfast Included</p>
+                <p><a href="#rooms">Apartment-Single</a> | <a href="#rooms">Apartment-Double</a></p>
+                <h4>$<a href="#price">120</a>/Night</h4>
+                <hr width="30%" align="left">
+                <button type="submit">BOOK NOW</button>
+            </span>
+        </div>
+        <br><hr width="65%" align="left">
+        <div class="section rooms">
+            <span>
+                <h3>Two-Bedroom Family Cottages</h3>
+                <h5>Options:</h5>
+                <p>Self-Catering | No Breakfast Included</p>
+                <p>Occupies up to 4 Adults</p>
+                <h4>$<a href="#price">170</a>/Night</h4>
+                <hr width="30%" align="left">
+                <button type="submit">BOOK NOW</button>
+            </span>
+        </div>
+        <!-- <br><hr width="65%" align="left"> -->
+    </section>
+    <section class="section sect-contact">
+        <div id="contact-form">
+            <h2>Contact Us</h2>
+
+            <form @submit.prevent="submitForm">
+                <!-- <label for="name">Name:</label> -->
+                <input v-model="contactInfo.name" placeholder="Your Name" type="text" id="name" required>
+                <br>
+                <!-- <label for="email">Email:</label> -->
+                <input v-model="contactInfo.phone" placeholder="Phone" type="phone" id="phone" required>
+                <!-- <br> -->
+                <input v-model="contactInfo.email" placeholder="Your Email" type="email" id="email" required>
+                <br><br><br>
+                <label for="message">Leave Your Message:</label>
+                <br><br>
+                <textarea v-model="contactInfo.message" id="message" rows="4" required></textarea>
+                <br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <script src="scripts/contact-form.js"></script>
+        <div class="side-img-form"></div>
     </section>
     <div class="section" id="wa-me">
         <a href="https://wa.me/+265984222331" target="_blank">
