@@ -30,7 +30,7 @@
     </header>
     <div class=" section search-container">
         <div class="search-box" id="booker">
-            <form @submit.prevent="submitReservation">
+            <form @submit.prevent="submitReservation" class="reserve-form">
     
                 <label for="checkin">Check-in*</label>
                 <input v-model="reservation.checkin" type="date" placeholder="Check-in Date" id="checkin" required>
@@ -64,34 +64,58 @@
                 <h3>Standard Deluxe Room</h3>
                 <h5>Options:</h5>
                 <p>Breakfast Included in the Rates</p>
-                <p><a href="#rooms">Deluxe-Single</a> | <a href="#rooms">Deluxe-Double</a></p>
-                <h4>$<a href="#price">105</a>/Night</h4>
+                <p><a href="#rooms" onclick="updatePrice('single')">Deluxe-Single</a> | <a href="#rooms" onclick="updatePrice('double')">Deluxe-Double</a></p>
+                <h4>$<span id="price">105</span>/Night</h4>
                 <hr width="30%" align="left">
-                <button type="submit">BOOK NOW</button>
+                <button type="submit">select</button>
             </span>
+            <script>
+                // Function to update the price based on the selected option
+                function updatePrice(option) {
+                    var priceElement = document.getElementById("price");
+
+                    // Check the selected option and update the price accordingly
+                    if (option === 'single') {
+                        priceElement.textContent = "95";
+                    } else if (option === 'double') {
+                        priceElement.textContent = "105";
+                    }
+                }
+            </script>
         </div>
-        <br><hr width="65%" align="left">
         <div class="section rooms">
             <span>
                 <h3>Studio-loft Apartments</h3>
                 <h5>Options:</h5>
                 <p>Self-Catering | No Breakfast Included</p>
-                <p><a href="#rooms">Apartment-Single</a> | <a href="#rooms">Apartment-Double</a></p>
-                <h4>$<a href="#price">120</a>/Night</h4>
+                <p><a href="#rooms" onclick="updatePrice_a('a_single')">Apartment-Single</a> | <a href="#rooms" onclick="updatePrice_a('a_double')">Apartment-Double</a></p>
+                <h4>$<span id="a_price">120</span>/Night</h4>
                 <hr width="30%" align="left">
-                <button type="submit">BOOK NOW</button>
+                <button type="submit">select</button>
             </span>
+            <script>
+                // Function to update the price based on the selected option
+                function updatePrice_a(option) {
+                    var priceElement = document.getElementById("a_price");
+
+                    // Check the selected option and update the price accordingly
+                    if (option === 'a_single') {
+                        priceElement.textContent = "110";
+                    } else if (option === 'a_double') {
+                        priceElement.textContent = "120";
+                    }
+                }
+            </script>
         </div>
-        <br><hr width="65%" align="left">
         <div class="section rooms">
             <span>
                 <h3>Two-Bedroom Family Cottages</h3>
                 <h5>Options:</h5>
                 <p>Self-Catering | No Breakfast Included</p>
                 <p>Occupies up to 4 Adults</p>
-                <h4>$<a href="#price">170</a>/Night</h4>
+                <h4>$<span>170</span>/Night</h4>
                 <hr width="30%" align="left">
-                <button type="submit">BOOK NOW</button>
+                <button type="submit">select</button>
             </span>
         </div>
         <!-- <br><hr width="65%" align="left"> -->

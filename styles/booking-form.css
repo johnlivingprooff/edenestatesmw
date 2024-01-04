@@ -19,18 +19,18 @@
     margin-top: 100px;
 }
 
-form {
+.reserve-form {
   margin: 1.2% 0.05%;
   align-items: center;
   position: relative;
   outline: none;
  }
 
-form label {
+.reserve-form label {
   padding: 1%;
 }
 
-form input {
+.reserve-form input {
   border: 1px solid #001a56;
   padding: 1%;
   width: 17%;
@@ -38,7 +38,7 @@ form input {
   letter-spacing: 2px;
 }
 
-form select {
+.reserve-form select {
   border: 1px solid #001a56;
   padding: 1%;
   width: 5%;
@@ -46,7 +46,7 @@ form select {
   letter-spacing: 2px;
 }
 
-form button {
+.reserve-form button {
   margin: 0 25px;
   font-size: 1em;
   letter-spacing: 2px;
@@ -58,20 +58,25 @@ form button {
   transition: all 0.3s ease-in;
 }
 
-form button:hover {
+.reserve-form button:hover {
   transform: scale(1.1);
   background-color: bisque;
   color: #001a56;
 }
 
 .sect-one {
-  position: relative;
-  margin: 150px 200px;
-  height: 110vh;
+  align-items: center;
+  margin-top: 150px;
+  margin-left: 250px;
+  height: 150vh;
+  justify-content: center;
 }
 
 .rooms {
   position: relative;
+  margin-right: 150px;
+  display: flex;
+  margin-bottom: 75px;
 }
 
 .rooms span {
@@ -109,7 +114,7 @@ form button:hover {
   font-size: 15px;
   margin: 2px 0;
   margin-bottom: 18px;
-  a {
+  span {
     font-size: 40px;
     color: #001a56;
     text-decoration: none;
@@ -124,6 +129,7 @@ form button:hover {
   padding: 10px 20px;
   font-size: 20px;
   letter-spacing: 1px;
+  text-transform: uppercase;
   transition: all 0.3s ease-in-out;
 }
 
