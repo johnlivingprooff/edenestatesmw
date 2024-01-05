@@ -1,30 +1,49 @@
-(function() {
-    new Vue({
-        el: '#booking-form',
-        data: {
+const vm = Vue.createApp({
+    data() {
+        return{
             reservation: {
+            checkin: '',
+            checkout: '',
+            guests: '1'
+            }
+        };
+    },
+    methods: {
+        submitReservation() {
+            this.sendDataToServer();
+
+            this.reservation = {
                 checkin: '',
                 checkout: '',
-                guests: ''
-            }
+                guests: '1'
+            };
         },
-        methods: {
-            submitReservation() {
-                // Simulate sending the reservation data to your server
-                this.sendDataToServer();
- 
-                // Reset the form or perform any other actions after submission
-                this.reservation = {
-                   checkin: '',
-                   checkout: '',
-                   guests: ''
-                };
-            },
-            sendDataToServer() {
-                // This is a placeholder function. Replace this with actual AJAX call or Fetch API call to your server.
-                console.log('Sending reservation data to server:', this.reservation);
-            }
+        sendDataToServer() {
+            console.log('Sending reservation data to server:', this.reservation);
+            // implementing API call here
         }
-    });   
- })
- 
+    },
+    template: `
+    <h2>Book Your Stay</h2>
+    <p>Required fields are followed by *</p>
+
+    <form @submit.prevent="submitReservation">
+
+        <label for="checkin">Check-in Date: *</label>
+        <input v-model="reservation.checkin" type="date" id="checkin" required>
+
+        <label for="checkout">Check-out Date: *</label>
+        <input v-model="reservation.checkout" type="date" id="checkout" required>
+
+        <label for="guests">Adults</label>
+        <select v-model="reservation.guests" id="guests" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <button type="submit">see options</button>
+    </form>
+    `
+}).mount('#booking-form')
