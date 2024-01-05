@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Written by John-Livngprooff -->
-    <title>Eden Estates& Resort―A Slice of Heaven</title>
+    <title>Privacy Policies ― Eden Estates</title>
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/policies.css">
     <link rel="shortcut icon" href="images/emblem.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,77 +27,73 @@
             <button id="book-now">Book Now</button>
         </a>
     </header>
-    <section class="section sect-one">
-        <div class="top">
-            <div id="booking-form">
-                <h2>Book Your Stay</h2>
-                <p>Required fields are followed by *</p>
-    
-                <form @submit.prevent="submitReservation">
-    
-                    <label for="checkin">Check-in Date: *</label>
-                    <input v-model="reservation.checkin" type="date" id="checkin" required>
-    
-                    <label for="checkout">Check-out Date: *</label>
-                    <input v-model="reservation.checkout" type="date" id="checkout" required>
-    
-                    <label for="guests">Adults</label>
-                    <select v-model="reservation.guests" id="guests" required>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <!-- Add more options as needed -->
-                    </select>
-                    <button type="submit">see options</button>
-                </form>
-               
-            </div>
-        </div>
-        <script src="scripts/booking-form.js"></script>
-    </section>
-    <section class="section sect-two">
-        <div class="side-img-cont">
-            <!-- <img src="images/welcome-side.JPG" alt="WELCOME"> -->
-        </div>
-        <span>
-            <h1>WELCOME TO<br>Eden Estate & Resort</h1>
-            <p>We are an eco-tourism environment located on <br>
-                the outskirts of Lilongwe City, that allows patrons <br>
-                to enjoy the tranquillity of Nature, and a <br>
-                peaceful getaway without having to leave the city.</p>
-            <button id="explore"><a href="gallery">EXPLORE</a></button>
-        </span>
-    </section>
-    <!-- accommodation options -->
-    <section class="section sect-four"> 
-        <div class="acc-box">
-            <img src="images/deluxe-lamp.jpg" alt="Deluxe Room">
-            <h3>standard <br>Deluxe Rooms</h3>
-            <p>High-ceilinged and well-polished continental rooms. <br>
-                Suitable for Romantic Getaways, and leisure retreats</p>
-            <h4>From: <br><b>$95 per night</b></h4>
-            <button id="book-now-room" >Book Now</button>
-        </div>
-        <div class="acc-box">
-            <img src="images/cottage-veranda.JPG" alt="Deluxe Room">
-            <h3>Two-bedroom <br>Family Cottages</h3>
-            <p>Fully furnished and serviced 2-bedroom homes. <br>
-                Suitable for all family gateways and team retreats.</p>
-            <h4>Price: <br><b>$170 per night</b></h4>
-            <button id="book-now-room">Book Now</button>
-        </div>
-        <div class="acc-box">
-            <img src="images/apartment-two.JPG" alt="Deluxe Room">
-            <h3>Studio-loft <br>Apartments</h3>
-            <p>Fully furnished and serviced studio loft apartment. <br>
-                Suitable for a relaxation or work getaway.</p>
-            <h4>From: <br><b>$110 per night</b></h4>
-            <button id="book-now-room">Book Now</button>
-        </div>
-    </section>
-    <section class="section sect-three">
-        <div></div>
+    <section class="sect-one">
+        <h2>OUR TERMS/Policy</h2>
+        <p>
+            <h3>Standard Admission Policy</h3>
+            We are dedicated to ensuring a safe and enjoyable experience for all our guests. Please review our admissions policy for important information:
+           
+            <h4>Health/Safety:</h4>
+            Your well-being is our top priority.
+            We strictly adhere to all precautionary measures recommended 
+            by health authorities, including the Ministry of Health guidelines.
+           
+            <h4>Check-In/Check-Out:</h4>
+            <span class="checked">Check-In Time: 1200hrs – 2200hrs Check Out Time: 1500hrs</span> <br><br>
+
+            Early check-In or Late-Check out is subjected to bed/room 
+            availability on the relevant day, to be reconfirmed with the 
+            front office staff. A levy is chargeable for early check-in 
+            from 0700 to 1200 hours and late check-out from 1200 to 1800 hours. 
+            Room not occupied by 2200 hours will be seen as No Show, unless prior 
+            arrangement has been made.
+
+            <h4>Reservation Policy:</h4>
+            A valid ID and credit card are required at check-in. 
+            The credit card must match the name on the reservation.
+            To secure your reservation, a deposit may be required.
+
+            <h4>Cancellation Policy:</h4>
+            Please refer to your booking confirmation for our 
+            cancellation policy. Late cancellations or no-shows may 
+            result in charges.
+        </p><br><br>
+        <p>
+            <h3>Payment Policy</h3>
+            <span class="checked">For Peak Season [July 1 – January 13], all reservations payments are non-refundable</span> <br><br>
+
+            <b>Guarantee by credit card:</b> Reservation is allowed to modify/cancel online on your own before 48 hours prior 
+            to the arrival date and no cancellation fees. Should you wish to make full payment in advance, please contact our 
+            Central Reservation to discuss your details.
+
+            <br><br><b>Cancellation/No Show Policy:</b> Once a reservation is confirmed, please notify us by email of any 
+            cancellation or modification of the booking at least 3 days (48 hours) before arrival for FIT 
+            (Free Independent Traveler) bookings and 2 weeks before arrival for Group bookings in order to avoid a charge of 1 night’s stay to be imposed.
+
+
+            <br><br><b>Last-minute reservations:</b> We would consider a reservation as last-minute 
+            when it is made a day before arrival. Once a last-minute reservation is confirmed, please 
+            notify us by e-mail of any cancellation or modification of the booking at least 3 hours before 
+            arrival for FIT bookings only, in order to avoid a charge of 1 night’s stay to be imposed. All 
+            guests must produce a valid passport/National ID upon Check-in: For any early Check-out, there will be 
+            no penalty to be imposed. In an event of a guest No Show, a fee of one night’s rate will be charged
+        </p><br>
+        <h3>Other Terms/Policies</h3>
+        <p>
+            <h4>Guest Conduct:</h4>
+            Guests are expected to conduct themselves in a respectful and considerate manner. Any disruptive behavior may result in eviction without refund.
+            <h4>Facility Use:</h4>
+            The use of hotel facilities, including the pool, and recreational areas, is at the user's risk.
+            Parents/guardians are responsible for the supervision of their children in all areas of the hotel.
+            <h4>Parking:</h4>
+            Vehicles are parked at the owner's risk. Please ensure your vehicle is securely locked.
+        </p>
+            <h3>DISCLAIMER:</h3>
+            <p>
+            As all possible measures have been put in place, the management of Eden Estates is not responsible for the tenant’s and visitors’ personal safety and property. Vehicles are parked at the owner's risk. The use of facilities is at the user’s risk.
+            By staying at Eden Estates, you acknowledge and agree to abide by our admissions policy and disclaimer. We appreciate your cooperation and wish you a pleasant stay! For any inquiries, please fill the contact form below.
+            </p>
+
     </section>
     <section class="section sect-contact">
         <div id="contact-form">

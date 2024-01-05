@@ -1,0 +1,40 @@
+.sect-one {
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    padding: 0 15%;
+    text-align: justify;
+    line-height: 25px;
+}
+
+.sect-one h2 {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 10px;
+    font-weight: 850;
+    font-size: 35px;
+    text-align: center;
+}
+
+.sect-one h3 {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.sect-one h4 {
+    margin-bottom: 10px;
+}
+
+.sect-one p {
+    white-space: normal;
+}
+
+.checked {
+    text-transform: capitalize;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 550;
+    font-family: 'montserrat', sans-serif;
+}

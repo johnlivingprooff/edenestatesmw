@@ -4,6 +4,8 @@
         font-family: 'PT Serif', serif;
         font-family: 'Raleway', sans-serif;
         margin: 0;
+        justify-content: center;
+        align-items: center;
     }
 
     .header {
@@ -218,6 +220,8 @@
         font-family: 'PT Serif', serif;
         font-family: 'Raleway', sans-serif;
         margin: 0;
+        justify-content: center;
+        align-items: center;
     }
 
     .header {
@@ -316,10 +320,12 @@
         display: flex;
         background-color: #001a56;
         color: #d5cdd4;
+        justify-content: center;
+        align-items: center;
     }
 
     .addrs {
-        margin-left: 5%;
+        margin-left: 0;
     }
 
     .addrs ul {
@@ -347,7 +353,7 @@
 
     .f-content {
         margin-left: 5%;
-        margin-top: 30px;
+        margin-right: 5%;
     }
 
     .f-content ul {
