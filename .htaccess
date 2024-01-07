@@ -1,6 +1,7 @@
 # mod_url_re-write starts here
 
 RewriteEngine on
+RewriteBase /
 
 # doesn't apply to exisiting directories
 
@@ -15,4 +16,8 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
 
 # Redirect index.html to the root domain
-RewriteRule ^index\.html$ http://one.edenestatesmw.com/ [R=301,L]
+RewriteRule ^static_html/index\.html$ http://one.edenestatesmw.com/ [R=301,L]
+
+# Redirects the static_html/ to root domain
+RewriteCond %{REQUEST_URI} !^/static_html/
+RewriteRule ^(.*)$ /static_html/$1 [L,QSA]
