@@ -19,8 +19,21 @@ const vm = Vue.createApp({
             };
         },
         sendDataToServer() {
+            const baseUri = process.env.VUE_APP_BASE_URL;
             console.log('Sending reservation data to server:', this.reservation);
             // implementing API call here
+            fetch(`${baseUri}/b/reservations/`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(this.reservation)
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch((error) => {
+                console.error('Error:', error);
+            });
         }
     },
     template: `
