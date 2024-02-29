@@ -29,11 +29,31 @@
     <section class="section sect-one">
         <div class="top">
             <div id="booking-form">
-                {{ template }}
+                <h2>Book Your Stay</h2>
+    <p>Required fields are followed by *</p>
+
+    <form @submit.prevent="submitReservation">
+
+        <label for="checkin">Check-in Date: *</label>
+        <input v-model="reservation.checkin" type="date" id="checkin" required>
+
+        <label for="checkout">Check-out Date: *</label>
+        <input v-model="reservation.checkout" type="date" id="checkout" required>
+
+        <label for="guests">Adults</label>
+        <select v-model="reservation.guests" id="guests" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <button type="submit">see options</button>
+    </form>
             </div>
         </div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <script src="scripts/booking-form.js"></script>
+        <!-- <script src="scripts/booking-form.js"></script> -->
     </section>
     <section class="section sect-two">
         <div class="side-img-cont">
