@@ -31,7 +31,7 @@
         }
     }
 
-    #booking-form form {
+    #booking-form span {
         display: block;
         label {
             font-size: 15px;
@@ -74,7 +74,7 @@
         }
     }
 
-    #booking-form form button:hover {
+    #booking-form span button:hover {
         background-color: beige;
         color: #001a56;
     }
@@ -271,7 +271,7 @@
         }
     }
 
-    #booking-form form {
+    #booking-form span {
         display: block;
         label {
             font-size: 15px;
@@ -311,12 +311,20 @@
             color: beige;
             border: none;
             transition: all 0.3s ease;
+            a {
+                text-decoration: none;
+                color: beige;
+            }
         }
     }
 
-    #booking-form form button:hover {
+    #booking-form span button:hover {
         background-color: beige;
         color: #001a56;
+        a {
+            text-decoration: none;
+            color: #001a56;
+        }
     }
 
     .sect-two {

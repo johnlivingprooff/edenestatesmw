@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Written by John-Livngprooff -->
+        <title>Book Your Stay―Eden Estates& Resort</title>
+        <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="./styles/home.css">
+        <link rel="shortcut icon" href="images/emblem.png" type="image/png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header class="section header">
+        <img src="images/emblem.png" alt="Eden_Logo" id="logo">
+        <div class="nav-bar"><ul>
+            <li><a href="index">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="gallery">Gallery</a></li>
+            <li><a href="blog">Blog</a></li>
+        </ul>
+        </div>
+        <a href="booking">
+            <button id="book-now">Book Now</button>
+        </a>
+    </header>
+
+    
+
+    <section class="section sect-contact">
+        <div id="contact-form">
+            <h2>Contact Us</h2>
+
+            <form @submit.prevent="submitForm">
+                <!-- <label for="name">Name:</label> -->
+                <input v-model="contactInfo.name" placeholder="Your Name" type="text" id="name" required>
+                <br>
+                <!-- <label for="email">Email:</label> -->
+                <input v-model="contactInfo.phone" placeholder="Phone" type="phone" id="phone" required>
+                <!-- <br> -->
+                <input v-model="contactInfo.email" placeholder="Your Email" type="email" id="email" required>
+                <br><br><br>
+                <label for="message">Leave Your Message:</label>
+                <br><br>
+                <textarea v-model="contactInfo.message" id="message" rows="4" required></textarea>
+                <br><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <script src="scripts/contact-form.js"></script>
+        <div class="side-img-form"></div>
+    </section>
+    <div class="section" id="wa-me">
+        <a href="https://wa.me/+265984222331" target="_blank">
+            <img src="images/whatsapp-round-icon.png" alt="WhatsApp">
+        </a>
+    </div>
+    <footer class="section footer">
+        <div class="addrs">
+            <ul>
+                <h2>Eden Estates & Resort</h2>
+                <p>A Slice of Heaven―©2024</p>
+                <li><b>Head Office:</b> Old-Airport Road, S117, Lilongwe</li>
+                <li>Malawi, Africa</li>
+            </ul>
+        </div>
+        <div class="f-content">
+            <ul>
+                <h2>Contacts:</h2>
+                <li><a href="mailto:info@edenestatesmw.com">Send Us an Email</a></li>
+                <li><a href="tel:+265984222332">Call</a>―<a href="https://wa.me/+265984222331">WhatsApp</a></li>
+            </ul>
+        </div>
+        <div class="f-content">
+            <ul>
+                <h2>Policies:</h2>
+                <li><a href="policies">Bookings/Cancellation</a></li>
+                <li><a href="policies">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="f-content">
+            <ul>
+                <h2>Socials</h2>
+                <li><a href="https://facebook.com/edenestatesmw">
+                    <img src="images/Facebook Round Black Icon.svg" alt="" width="20px" height="20px">
+                </a>
+                <a href="https://instagram.com/edenestatesmw">
+                    <img src="images/instagram.png" alt="instagram-logo" width="20px" height="20px">
+                </a>
+                <a href="https://linkedin.com/in/edenestatesmw">
+                    <img src="images/linkedin_black_logo_icon_147114.png" alt="linkedin-logo" width="20px" height="20px">
+                </a>
+                <a href="https://x.com/edenestatesmw">
+                    <img src="images/x-social-media-round-icon.png" alt="x-logo" width="20px" height="20px">
+                </a></li>
+                <li><br>
+                    Designed by <a href="https://github.com/johnlivingprooff" target="_blank">81PIXELS</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="scripts/full-page-animate.js"></script>
+</body>
+</html>

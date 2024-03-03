@@ -1,10 +1,17 @@
-const vm = Vue.createApp({
-    template: `
-    
-    `,
-    methods: {
-        submitReservation() {
-            console.log('Reservation submitted:', this.reservation)
-        }
-    },
-}).mount('#booking-form')
+const bookingForm = Vue.createApp({
+  el: '#booking-form',
+  data () {
+    return {
+      reservation: {
+        checkin: '',
+        checkout: '',
+        guests: 1
+      }
+    };
+  },
+  methods: {
+    calcDatePrice () {
+        
+    }
+  }
+}).mount();

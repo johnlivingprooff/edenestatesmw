@@ -30,30 +30,32 @@
         <div class="top">
             <div id="booking-form">
                 <h2>Book Your Stay</h2>
-    <p>Required fields are followed by *</p>
+                <p>Required fields are followed by *</p>
 
-    <form @submit.prevent="submitReservation">
+                <span>
+                    <label for="checkin">Check-in Date: *</label>
+                    <input v-model="reservation.checkin" type="date" id="checkin" required>
 
-        <label for="checkin">Check-in Date: *</label>
-        <input v-model="reservation.checkin" type="date" id="checkin" required>
+                    <label for="checkout">Check-out Date: *</label>
+                    <input v-model="reservation.checkout" type="date" id="checkout" required>
 
-        <label for="checkout">Check-out Date: *</label>
-        <input v-model="reservation.checkout" type="date" id="checkout" required>
-
-        <label for="guests">Adults</label>
-        <select v-model="reservation.guests" id="guests" required>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-        <button type="submit">see options</button>
-    </form>
+                    <label for="guests">Guests</label>
+                    <select v-model="reservation.guests" id="guests">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <!-- <button @click="calcDatePrice"><a href="#acc_sect">see options</a></button> -->
+                    <button type="submit" @click="calcDatePrice" :disabled="!reservation.checkin || !reservation.checkout">
+                        <a href="#acc_sect">see options</a>
+                    </button>
+                    
+                </span>
             </div>
         </div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <!-- <script src="scripts/booking-form.js"></script> -->
+        <script src="scripts/booking-form.js"></script>
     </section>
     <section class="section sect-two">
         <div class="side-img-cont">
@@ -69,7 +71,7 @@
         </span>
     </section>
     <!-- accommodation options -->
-    <section class="section sect-four"> 
+    <section class="section sect-four" id="acc_sect"> 
         <div class="acc-box">
             <img src="images/deluxe-lamp.jpg" alt="Deluxe Room">
             <h3>standard <br>Deluxe Rooms</h3>
