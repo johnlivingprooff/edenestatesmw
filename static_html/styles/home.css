@@ -375,7 +375,7 @@
     .side-img-cont {
         width: 70%;
         height: 850px;
-        background-image: url(../images/welcome-side.JPG);
+        background-image: url(../images/fishing_apt.jpg);
         background-position: left;
         background-repeat: no-repeat;
         background-size: 1500px;
@@ -410,8 +410,7 @@
         display: block;
         border: #dce3c8 solid 1px;
         border-radius: 4px;
-        padding: 10px;
-        padding-bottom: 15px;
+        padding: 10px 10px 15px 10px;
         transition: transform 0.3s ease;
         background-color: rgb(255, 255, 255);
         overflow: hidden;
@@ -479,10 +478,15 @@
         transition: transform 0.3s ease;
     }
 
-    #book-now-room:hover {
+    #book-now-room:hover, #book-now-room a:hover {
         background-color: beige;
         color: #001a56;
         transform: scale(1.08);
+    }
+
+    #book-now-room a {
+        text-decoration: none;
+        color: rgb(135, 135, 135);
     }
 
     .sect-three {
@@ -495,6 +499,49 @@
     .sect-three div {
         width: 100%;
         height: 500px;
+    }
+
+    .playpark {
+        background-image: url(../images/81PX00155.jpg);
+        background-size: cover;
+        height: 70vh;
+        margin: 0;
+    }
+
+    .playpark h1 {
+        position: absolute;
+        z-index: 1000;
+        color: #fff;
+        margin: 100px 150px 0 150px;
+        font-size: 150px;
+        text-shadow: 10px 10px 40px #666;
+    }
+
+    .playpark div video {
+        width: 100%;
+        height: 70vh;
+        object-fit: cover;
+        transition: all 0.3s ease;
+    }
+
+    .playpark h1:hover {
+        transition: all 0.3s ease;
+        filter: blur(30px);
+    }
+    
+    .playpark div video:hover, .playpark h1:hover {
+        transition: all 0.3s ease;
+        /* filter: blur(30px); */
+    }
+
+    /* Hide the default browser controls */
+    .playpark div video::-webkit-media-controls {
+        display: none;
+    }
+
+    .playpark span h1 {
+        margin-top: -50px;
+        filter: blur(10px);
     }
 }
 
@@ -638,6 +685,7 @@
         border-bottom: solid #ffffff 5px;
         width: 100%;
         justify-content: center;
+        padding: auto 15px ;
     }
 
     .acc-box {

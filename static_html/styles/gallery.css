@@ -116,7 +116,6 @@
     .gallery {
         display: flex;
         width: 100%;
-        height: auto;
         overflow: hidden;
         flex-flow: row wrap;
         justify-content: center;
@@ -124,15 +123,24 @@
     }
 
     .gallery img {
-        width: auto;
-        padding: 5px 5px;
-        height: 240px;
+        width: fit-content;
+        padding: 3px 3px;
+        height: 250px;
+        transition: all 0.3s ease-in-out;
+        overflow: hidden;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.01);
+        transition: all 0.3s ease-in-out;
     }
 
     .gallery video {
-        width: auto;
-        padding: 5px 5px;
-        height: 240px;
+        width: 350px;
+        padding: 2px 2px;
+        height: fit-content;
+        overflow: hidden;
+        display: none;
     }
 }
 
