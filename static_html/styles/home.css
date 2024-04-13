@@ -71,12 +71,20 @@
             color: beige;
             border: none;
             transition: all 0.3s ease;
+            a {
+                text-decoration: none;
+                color: beige;
+            }
         }
     }
 
     #booking-form span button:hover {
         background-color: beige;
         color: #001a56;
+        a {
+            text-decoration: none;
+            color: #001a56;
+        }
     }
 
     .sect-two {
@@ -187,7 +195,7 @@
         font-weight: 250;
         text-transform: uppercase;
         b {
-            font-size: 18px;
+            font-size: 14px;
             font-style: italic;
             text-transform: lowercase;
             color: #464646;
@@ -219,10 +227,15 @@
         transition: transform 0.3s ease;
     }
 
-    #book-now-room:hover {
+    #book-now-room:hover, #book-now-room a:hover {
         background-color: beige;
         color: #001a56;
         transform: scale(1.08);
+    }
+
+    #book-now-room a {
+        text-decoration: none;
+        color: rgb(135, 135, 135);
     }
 
     .sect-three {
@@ -242,9 +255,37 @@
         overflow: hidden;
     }
 
+    .playpark h1 {
+        position: absolute;
+        z-index: 1000;
+        color: #fff;
+        margin: 100px 150px 0 150px;
+        font-size: 65px;
+        text-shadow: 10px 10px 40px #666;
+    }
+
     .playpark div video {
         width: 100%;
         height: fit-content;
+    }
+
+    .playpark h1:hover {
+        transition: all 0.3s ease;
+        filter: blur(30px);
+    }
+
+    .playpark div video:hover, .playpark h1:hover {
+        transition: all 0.3s ease;
+        /* filter: blur(30px); */
+    }
+
+    .playpark div video::-webkit-media-controls {
+        display: none;
+    }
+
+    .playpark span h1 {
+        margin-top: -50px;
+        filter: blur(10px);
     }
 }
 
@@ -629,13 +670,23 @@
             color: beige;
             border: none;
             transition: all 0.3s ease;
+            a {
+                text-decoration: none;
+                color: beige;
+            }
         }
     }
 
-    #booking-form form button:hover {
+    #booking-form span button:hover {
         background-color: beige;
         color: #001a56;
+        a {
+            text-decoration: none;
+            color: #001a56;
+        }
     }
+
+
 
     .sect-two {
         display: block;
@@ -738,7 +789,7 @@
         font-weight: 250;
         text-transform: uppercase;
         b {
-            font-size: 18px;
+            font-size: 13px;
             font-style: italic;
             text-transform: lowercase;
             color: #464646;
@@ -769,10 +820,15 @@
         transition: transform 0.3s ease;
     }
 
-    #book-now-room:hover {
+    #book-now-room:hover, #book-now-room a:hover {
         background-color: beige;
         color: #001a56;
         transform: scale(1.08);
+    }
+
+    #book-now-room a {
+        text-decoration: none;
+        color: rgb(135, 135, 135);
     }
 
     .sect-three {
@@ -792,8 +848,36 @@
         overflow: hidden;
     }
 
+    .playpark h1 {
+        position: absolute;
+        z-index: 1000;
+        color: #fff;
+        margin: 25px 15px 0 15px;
+        font-size: 35px;
+        text-shadow: 10px 10px 40px #666;
+    }
+
     .playpark div video {
         width: 100%;
         height: fit-content;
+    }
+
+    .playpark h1:hover {
+        transition: all 0.3s ease;
+        filter: blur(30px);
+    }
+
+    .playpark div video:hover, .playpark h1:hover {
+        transition: all 0.3s ease;
+        /* filter: blur(30px); */
+    }
+
+    .playpark div video::-webkit-media-controls {
+        display: none;
+    }
+
+    .playpark span h1 {
+        margin-top: -50px;
+        filter: blur(10px);
     }
 }

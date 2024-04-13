@@ -68,3 +68,45 @@
         letter-spacing: 4px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .acc-box {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .acc-box {
+        width: 100%;
+        display: block;
+    }
+
+    .sect-one h2 {
+        font-size: 35px;
+        margin-top: 65px;
+    }
+
+    .acc-box img {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .acc-box span {
+        padding: 30px;
+        h3 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 12px;
+        }
+        h4 {
+            font-size: 12px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+    }
+}
+
+/* appear */
