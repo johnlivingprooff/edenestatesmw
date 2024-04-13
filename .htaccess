@@ -3,16 +3,16 @@
 RewriteEngine on
 RewriteBase /
 
-# doesn't apply to exisiting directories
+# Exclude the 'backend/' path from redirection
+RewriteCond %{REQUEST_URI} !^/backend/
 
+# doesn't apply to existing directories
 RewriteCond %{REQUEST_FILENAME} !-d
 
 # Check for file in dir with a '.html' extension
-
 RewriteCond %{REQUEST_FILENAME}\.html -f
 
 # pages with '.html' are displayed in browser
-
 RewriteRule ^(.*)$ $1.html [NC,L]
 
 # Redirect index.html to the root domain

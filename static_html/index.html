@@ -31,69 +31,58 @@
             <div id="booking-form">
                 <h2>Book Your Stay</h2>
                 <p>Required fields are followed by *</p>
-
-                <span>
-                    <label for="checkin">Check-in Date: *</label>
-                    <input v-model="reservation.checkin" type="date" id="checkin" required>
-
-                    <label for="checkout">Check-out Date: *</label>
-                    <input v-model="reservation.checkout" type="date" id="checkout" required>
-
-                    <label for="guests">Guests</label>
-                    <select v-model="reservation.guests" id="guests">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                    <!-- <button @click="calcDatePrice"><a href="#acc_sect">see options</a></button> -->
-                    <button type="submit" @click="calcDatePrice" :disabled="!reservation.checkin || !reservation.checkout">
-                        <a href="#acc_sect">see options</a>
-                    </button>
-                    
-                </span>
+    
+                <form action="backend/booking.php" method="POST">
+                    <!-- Set action attribute to point to the PHP script -->
+                    <!-- Set method attribute to "POST" -->
+                    <span>
+                        <label for="checkin">Check-in Date: *</label>
+                        <input name="checkin" type="date" id="checkin" required>
+    
+                        <label for="checkout">Check-out Date: *</label>
+                        <input name="checkout" type="date" id="checkout" required>
+    
+                        <label for="guests">Guests</label>
+                        <select name="guests" id="guests">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <!-- <button @click="calcDatePrice"><a href="#acc_sect">see options</a></button> -->
+                        <button type="submit" :disabled="!reservation.checkin || !reservation.checkout">
+                            <a href="#acc_sect">see options</a>
+                        </button>
+                    </span>
+                </form>
             </div>
         </div>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script>
-            const app = Vue.createApp({
-                data() {
-                    return {
-                        reservation: {
-                            checkin: null,
-                            checkout: null,
-                            guests: 1
-                        }
-                    };
-                },
-                methods: {
-                    calcDatePrice() {
-                        // This method can be used to calculate prices or perform other actions when the form is submitted
-                    },
-                    validateDates() {
-                        const today = new Date().toISOString().split('T')[0];
-                        // Ensure that check-out date is not before check-in date
-                        if (this.reservation.checkin && this.reservation.checkout && this.reservation.checkout < this.reservation.checkin) {
-                            // If check-out date is before check-in date, set check-out date to the same as check-in date
-                            this.reservation.checkout = this.reservation.checkin;
-                        }
-
-                        // Ensure that check-in date is not before today
-                        if (this.reservation.checkin && this.reservation.checkin < today) {
-                            // If check-in date is before today, set it to today's date
-                            this.reservation.checkin = today;
-                        }
-                    }
-                },
-                watch: {
-                    // Watch for changes in check-in and check-out dates and validate them
-                    'reservation.checkin': 'validateDates',
-                    'reservation.checkout': 'validateDates'
+            // Function to validate check-in and check-out dates
+            function validateDates() {
+                const checkinInput = document.getElementById('checkin');
+                const checkoutInput = document.getElementById('checkout');
+                
+                // Get today's date in yyyy-mm-dd format
+                const today = new Date().toISOString().split('T')[0];
+        
+                // Ensure check-in date is not before today
+                if (checkinInput.value < today) {
+                    checkinInput.value = today;
                 }
-            });
-
-            app.mount('#booking-form');
+        
+                // Ensure check-out date is not before check-in date
+                if (checkinInput.value && checkoutInput.value && checkoutInput.value < checkinInput.value) {
+                    checkoutInput.value = checkinInput.value;
+                }
+            }
+        
+            // Add event listeners to check-in and check-out inputs for validation
+            document.getElementById('checkin').addEventListener('change', validateDates);
+            document.getElementById('checkout').addEventListener('change', validateDates);
         </script>
+        
     </section>
     <section class="section sect-two">
         <div class="side-img-cont">
@@ -149,22 +138,16 @@
     <section class="section sect-contact">
         <div id="contact-form">
             <h2>Contact Us</h2>
-
-            <form @submit.prevent="submitForm">
-                <!-- <label for="name">Name:</label> -->
-                <input v-model="contactInfo.name" placeholder="Your Name" type="text" id="name" required>
-                <br>
-                <!-- <label for="email">Email:</label> -->
-                <input v-model="contactInfo.phone" placeholder="Phone" type="phone" id="phone" required>
-                <!-- <br> -->
-                <input v-model="contactInfo.email" placeholder="Your Email" type="email" id="email" required>
-                <br><br><br>
-                <label for="message">Leave Your Message:</label>
-                <br><br>
-                <textarea v-model="contactInfo.message" id="message" rows="4" required></textarea>
-                <br><br>
+    
+            <form id="contct-form">
+                <input type="text" id="name" placeholder="Your Name" required><br>
+                <input type="phone" id="phone" placeholder="Phone" required><br>
+                <input type="email" id="email" placeholder="Your Email" required><br><br>
+                <label for="message">Leave Your Message:</label><br><br>
+                <textarea id="message" rows="4" required></textarea><br><br>
                 <button type="submit">Submit</button>
-            </form>
+            </form><br>
+            <div id="contact-message"></div>
         </div>
         <script src="scripts/contact-form.js"></script>
         <div class="side-img-form"></div>

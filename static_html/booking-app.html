@@ -123,22 +123,16 @@
     <section class="section sect-contact">
         <div id="contact-form">
             <h2>Contact Us</h2>
-
-            <form @submit.prevent="submitForm">
-                <!-- <label for="name">Name:</label> -->
-                <input v-model="contactInfo.name" placeholder="Your Name" type="text" id="name" required>
-                <br>
-                <!-- <label for="email">Email:</label> -->
-                <input v-model="contactInfo.phone" placeholder="Phone" type="phone" id="phone" required>
-                <!-- <br> -->
-                <input v-model="contactInfo.email" placeholder="Your Email" type="email" id="email" required>
-                <br><br><br>
-                <label for="message">Leave Your Message:</label>
-                <br><br>
-                <textarea v-model="contactInfo.message" id="message" rows="4" required></textarea>
-                <br><br>
+    
+            <form id="contct-form">
+                <input type="text" id="name" placeholder="Your Name" required><br>
+                <input type="phone" id="phone" placeholder="Phone" required><br>
+                <input type="email" id="email" placeholder="Your Email" required><br><br>
+                <label for="message">Leave Your Message:</label><br><br>
+                <textarea id="message" rows="4" required></textarea><br><br>
                 <button type="submit">Submit</button>
-            </form>
+            </form><br>
+            <div id="contact-message"></div>
         </div>
         <script src="scripts/contact-form.js"></script>
         <div class="side-img-form"></div>

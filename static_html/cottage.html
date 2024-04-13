@@ -45,72 +45,117 @@
         </span>
     </section>
 
+    <script>
+        // Function to handle form submission
+        function submitForm() {
+            // Perform AJAX request to submit form data to the PHP script
+            // Assuming you're using the Fetch API for simplicity
+            fetch('backend/deluxe_booking.php', {
+                method: 'POST',
+                body: new FormData(document.getElementById('reservation-form'))
+            })
+            .then(response => response.text()) // Get response text
+            .then(data => {
+                // Check if the PHP script echoed "success"
+                if (data.trim() === 'success') {
+                    // If "success" is echoed, redirect to the thank-you page
+                    window.location.href = 'https://example.com/thank-you.html';
+                } else {
+                    // If not successful, handle the error or display a message to the user
+                    console.error('Failed to send reservation email.');
+                }
+            })
+            .catch(error => {
+                // Handle any errors that occur during the fetch operation
+                console.error('Error:', error);
+            });
+        }
+    </script>
     <!-- booking place -->
     <section class="section sect-four" id="acc_sect">
         <div id="reserve-form">
             <h2>Reserve your Room</h2>
-
-            <form @submit.prevent="submitForm">
-
-                <!-- <label for="checkin">Check-in*</label> -->
-                <input v-model="reservation.checkin" type="date" placeholder="Check-in Date" id="checkin" required>
+    
+            <form id="reservation-form" onsubmit="submitForm(); return false;">
+    
+                <!-- <label for="checkin">Check-in Date: *</label> -->
+                <input type="date" name="checkin" id="checkin" required>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <!-- <label for="checkout">Check-out*</label> -->
-                <input v-model="reservation.checkout" placeholder="Check-Out Date" type="date" id="checkout" required><br>
+                <!-- <label for="checkout">Check-out Date: *</label> -->
+                <input type="date" name="checkout" id="checkout" required><br>
                 
-                <label for="guests">Adults</label>
-                <select v-model="reservation.guests" id="adults" required>
+                <label for="adults">Adults</label>
+                <select name="adults" id="adults" required>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    
                 </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <label for="guests">Kids</label>
-                <select v-model="reservation.guests" id="guests" required>
+                
+                <label for="kids">Kids</label>
+                <select name="kids" id="kids" required>
                     <option value="0">0</option>
                     <option value="1">1</option>
                 </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
                 <label for="rooms"># of Rooms</label>
-                <select v-model="reservation.guests" id="rooms" required>
+                <select name="rooms" id="rooms" required>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <!-- Add more options as needed -->
                 </select>
-
+    
                 <br><br>
-                <input v-model="contactInfo.name" placeholder="Fist Name" type="text" id="name" required>
+                <input type="text" name="firstName" placeholder="First Name" required>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input v-model="contactInfo.name" placeholder="Surn Name" type="text" id="name" required>
+                <input type="text" name="lastName" placeholder="Last Name" required>
                 <br>
-                <!-- <label for="email">Email:</label> -->
-                <input v-model="contactInfo.phone" placeholder="Phone" type="phone" id="phone" required>
+                <input type="phone" name="phone" placeholder="Phone" required>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input v-model="contactInfo.email" placeholder="Your Email" type="email" id="email" required>
+                <input type="email" name="email" placeholder="Your Email" required>
                 <br><br><br>
-                <input v-model="contactInfo.name" placeholder="Guest Name(s)" type="text" id="name" required>
+                <input type="text" name="guestNames" placeholder="Guest Name(s)" required>
                 <br><br>
-                <label for="message">Any Vital Info you'd like to share:</label>
+                <label for="vitalInfo">Any Vital Info you'd like to share:</label>
                 <br><br>
-                <textarea v-model="contactInfo.message" id="message" rows="4" required></textarea>
+                <textarea name="vitalInfo" id="vitalInfo" rows="4" required></textarea>
                 <br><br>
-                <h2 id="price_paragraph"></h2>
                 <button type="submit">Book Now</button>
             </form>
         </div>
-        <script src="scripts/reserve-form.js"></script>
         <div class="side-res-form">
             <h2>Number of Nights</h2>
-        <p id="num_nights_paragraph">-</p>
-
-        <h2>Number of Rooms</h2>
-        <p id="num_rooms_paragraph">-</p>
-
-        <p id="price_paragraph"></p>
+            <p id="num_nights_paragraph">-</p>
+    
+            <h2>Number of Rooms</h2>
+            <p id="num_rooms_paragraph">-</p>
+    
+            <p id="price_paragraph">-</p>
         </div>
     </section>
     <script>
+        // Function to handle form submission
+        function submitForm() {
+            // Perform AJAX request to submit form data to the PHP script
+            // Assuming you're using the Fetch API for simplicity
+            fetch('backend/cottage.php', {
+                method: 'POST',
+                body: new FormData(document.getElementById('reservation-form'))
+            })
+            .then(response => {
+                // Handle the response here, but always redirect regardless of response
+                window.location.href = 'https://one.edenestatesmw.com/thank-you';
+            })
+            .catch(error => {
+                // Handle any errors that occur during the fetch operation
+                console.error('Error:', error);
+                // You can still log the error and inform the user if needed
+                alert('There was an error processing your request. Please try again later.');
+            });
+        }
+
+
         // Get the check-in, check-out, and adult guests input elements
         const checkinInput = document.getElementById('checkin');
         const checkoutInput = document.getElementById('checkout');
@@ -185,22 +230,16 @@
     <section class="section sect-contact">
         <div id="contact-form">
             <h2>Contact Us</h2>
-
-            <form @submit.prevent="submitForm">
-                <!-- <label for="name">Name:</label> -->
-                <input v-model="contactInfo.name" placeholder="Your Name" type="text" id="name" required>
-                <br>
-                <!-- <label for="email">Email:</label> -->
-                <input v-model="contactInfo.phone" placeholder="Phone" type="phone" id="phone" required>
-                <!-- <br> -->
-                <input v-model="contactInfo.email" placeholder="Your Email" type="email" id="email" required>
-                <br><br><br>
-                <label for="message">Leave Your Message:</label>
-                <br><br>
-                <textarea v-model="contactInfo.message" id="message" rows="4" required></textarea>
-                <br><br>
+    
+            <form id="contct-form">
+                <input type="text" id="name" placeholder="Your Name" required><br>
+                <input type="phone" id="phone" placeholder="Phone" required><br>
+                <input type="email" id="email" placeholder="Your Email" required><br><br>
+                <label for="message">Leave Your Message:</label><br><br>
+                <textarea id="message" rows="4" required></textarea><br><br>
                 <button type="submit">Submit</button>
-            </form>
+            </form><br>
+            <div id="contact-message"></div>
         </div>
         <script src="scripts/contact-form.js"></script>
         <div class="side-img-form"></div>
