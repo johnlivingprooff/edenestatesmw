@@ -16,7 +16,7 @@ RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html [NC,L]
 
 # Redirect index.html to the root domain
-RewriteRule ^static_html/index\.html$ http://one.edenestatesmw.com/ [R=301,L]
+RewriteRule ^static_html/index\.html$ http://edenestatesmw.com/ [R=301,L]
 
 # Redirects the static_html/ to root domain
 RewriteCond %{REQUEST_URI} !^/static_html/
