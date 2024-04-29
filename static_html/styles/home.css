@@ -287,6 +287,40 @@
         margin-top: -50px;
         filter: blur(10px);
     }
+
+    .partners {
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        height: 25vh;
+        text-align: center;
+        color: #8a8a8a;
+    }
+
+    .partners span {
+        display: flex;
+        flex-direction: row wrap;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin: 15px 10px;
+        img {
+            width: auto;
+            height: 45px;
+            margin: 0 10px;
+            padding: 15px;
+            filter: grayscale(100%);
+        }
+        transition: all ease-in-out 0.3s;
+    }
+
+    .partners span img:hover {
+        transform: scale(1.01);
+        transition: all ease-in-out 0.3s;
+        filter: grayscale(0%);
+    }
 }
 
 /* Desktop viewport*/
@@ -594,6 +628,86 @@
         margin-top: -50px;
         filter: blur(10px);
     }
+
+    .partners {
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        height: 40vh;
+        text-align: center;
+        color: #8a8a8a;
+    }
+
+    .partners span {
+        display: flex;
+        flex-direction: row wrap;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        margin: 15px 75px;
+        img {
+            width: auto;
+            height: 100px;
+            margin: 0 10px;
+            padding: 25px;
+            filter: grayscale(100%);
+        }
+        transition: all ease-in-out 0.3s;
+    }
+
+    .partners span img:hover {
+        transform: scale(1.01);
+        transition: all ease-in-out 0.3s;
+        filter: grayscale(0%);
+    }
+
+    .blogg {
+        justify-content: center;
+        align-items: center;
+        margin-top: 65px;
+        margin-bottom: 50px;
+        height: 50vh;
+        text-align: center;
+        color: #8a8a8a;
+    }
+
+    .titles {
+        display: flex;
+        flex-direction: row wrap;
+        justify-content: center;
+        text-align: center;
+        margin-top: 70px;
+    }
+
+    .titles span {
+        border: #001a56 1px solid;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 0 35px 0 35px;
+        p, h3 {
+            width: 100%;
+            text-align: justify;
+            a {
+                font-size: 12px;
+                text-decoration: underline;
+                color: #001a56;
+            }
+        }
+        h6 {
+            width: 80%;
+            text-align: justify;
+            color: #001a56;
+            a {
+                text-decoration: none;
+                color: #001a56;
+            }
+        }
+        img {
+            display: none;
+        }
+    }
 }
 
 /* Mobile viewport for acc-box */
@@ -879,5 +993,38 @@
     .playpark span h1 {
         margin-top: -50px;
         filter: blur(10px);
+    }
+
+    .partners {
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        height: 25vh;
+        text-align: center;
+        color: #8a8a8a;
+    }
+
+    .partners span {
+        display: flex;
+        flex-direction: row wrap;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin: 15px 10px;
+        img {
+            width: auto;
+            height: 30px;
+            margin: 0 10px;
+            /* filter: grayscale(100%); */
+        }
+        transition: all ease-in-out 0.3s;
+    }
+
+    .partners span img:hover {
+        transform: scale(1.01);
+        transition: all ease-in-out 0.3s;
+        /* filter: grayscale(0%); */
     }
 }

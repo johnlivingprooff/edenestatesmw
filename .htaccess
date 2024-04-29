@@ -6,6 +6,10 @@ RewriteBase /
 # Exclude the 'backend/' path from redirection
 RewriteCond %{REQUEST_URI} !^/backend/
 
+# Remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
 # doesn't apply to existing directories
 RewriteCond %{REQUEST_FILENAME} !-d
 

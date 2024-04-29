@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="We are an eco-tourism environment located on the outskirts of Lilongwe City, that allows patrons to enjoy the tranquillity of Nature, and a peaceful getaway without having to leave the city.">
     <meta property="og:image" content="https://edenestatesmw.com/static_html/images/gallery/1.jpg">
+    <meta name="author" content="John-Livingprooff">
+
 
     <!-- Written by John-Livngprooff -->
     <title>Eden Estates& Resort―A Slice of Heaven</title>
@@ -19,7 +21,7 @@
 </head>
 <body>
     <header class="section header">
-        <img src="images/emblem.png" alt="Eden_Logo" id="logo">
+        <a href="/"><img src="images/emblem.png" alt="Eden_Logo" id="logo"></a>
         <div class="nav-bar"><ul>
             <li><a href="index">Home</a></li>
             <li><a href="about">About</a></li>
@@ -27,7 +29,7 @@
             <li><a href="blog">Blog</a></li>
         </ul>
         </div>
-        <a href="booking">
+        <a href="book-now">
             <button id="book-now">Book Now</button>
         </a>
     </header>
@@ -37,7 +39,7 @@
                 <h2>Book Your Stay</h2>
                 <p>Required fields are followed by *</p>
     
-                <form action="backend/booking.php" method="POST">
+                <form action="#" method="POST">
                     <!-- Set action attribute to point to the PHP script -->
                     <!-- Set method attribute to "POST" -->
                     <span>
@@ -68,7 +70,7 @@
             function validateDates() {
                 const checkinInput = document.getElementById('checkin');
                 const checkoutInput = document.getElementById('checkout');
-                
+        
                 // Get today's date in yyyy-mm-dd format
                 const today = new Date().toISOString().split('T')[0];
         
@@ -81,12 +83,36 @@
                 if (checkinInput.value && checkoutInput.value && checkoutInput.value < checkinInput.value) {
                     checkoutInput.value = checkinInput.value;
                 }
+        
+                // Calculate number of nights
+                const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+                const firstDate = new Date(checkinInput.value);
+                const secondDate = new Date(checkoutInput.value);
+                const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+        
+                // Update prices
+                const deluxePrice = 95;
+                const cottagePrice = 170;
+                const apartmentPrice = 110;
+        
+                const deluxePriceText = '$' + (deluxePrice * diffDays) + ' for ' + diffDays + (diffDays === 1 ? ' night' : ' nights');
+                const cottagePriceText = '$' + (cottagePrice * diffDays) + ' for ' + diffDays + (diffDays === 1 ? ' night' : ' nights');
+                const apartmentPriceText = '$' + (apartmentPrice * diffDays) + ' for ' + diffDays + (diffDays === 1 ? ' night' : ' nights');
+        
+                document.getElementById('deluxe-price').textContent = deluxePriceText;
+                document.getElementById('cottage-price').textContent = cottagePriceText;
+                document.getElementById('apartment-price').textContent = apartmentPriceText;
             }
         
             // Add event listeners to check-in and check-out inputs for validation
             document.getElementById('checkin').addEventListener('change', validateDates);
             document.getElementById('checkout').addEventListener('change', validateDates);
+        
+            // Initial validation on page load
+            validateDates();
         </script>
+        
+        
         
     </section>
     <section class="section sect-two">
@@ -102,6 +128,55 @@
             <button id="explore"><a href="gallery">EXPLORE</a></button>
         </span>
     </section>
+
+    <section class="section partners">
+        <div>Some of Our <b>Travel Partners</b></div>
+        <span>
+            <img src="images/partners/bookingcom.png" alt="Booking.com">
+            <a href="https://www.booking.com/hotel/mw/eden-estates-and-lodge.html" target="_blank" rel="noopener noreferrer">
+            <img src="images/partners/Genius.png" alt="Genius"></a>
+            <a href="https://www.tripadvisor.com/Hotel_Review-g293811-d12406452-Reviews-Eden_Estates_Resort-Lilongwe_Central_Region.html" target="_blank" rel="noopener noreferrer">
+                <img src="images/partners/tripadvisor.png" alt="TripAdvisor">
+            </a>
+            <img src="images/partners/airbnb.jpg" alt="Airbnb">
+            <img src="images/partners/expedia.png" alt="Expedia">
+        </span>
+    </section>
+<br>
+    <hr width="85%" color="grey" class="section">
+
+    <section class="section blogg">
+        <div>
+            <h2>From Our Blog</h2>
+            <p>Read our latest blog posts to get a glimpse of what we offer.</p>
+        </div>
+        <section class="titles">
+            <span>
+                <img src="images/blogs/gardens.jpg" alt="Nature">
+                <h3>Tales from Our Tranquil Oasis</h3>
+                <p>In a world filled with hustle and bustle, finding moments of tranquility becomes increasingly rare. Yet, nestled amidst the vibrant landscape of Malawi, lies a hidd...<a href="blogs/tales-from-our-tranquil-oasis">read more</a></p>
+                <h6>By <a href="https://twitter.com/ola0luwajj">John-Livingprooff</a></h6>
+            </span>
+            <span>
+                <img src="images/blogs/gardens.jpg" alt="Nature">
+                <h3>Exploring Malawi: A Traveler's Guide to Hidden Gems</h3>
+                <p>Uncover off-the-beaten-path destinations, secret hideaways, and lesser-known attractions waiting to be exp...<a href="#">read more</a></p>
+                <h6>By <a href="https://twitter.com/ola0luwajj">John-Livingprooff</a></h6>
+            </span>
+            <span>
+                <img src="images/blogs/gardens.jpg" alt="Nature">
+                <h3>Indulgence Redefined</h3>
+                <p>Our lavish accommodations, exquisite dining, and impeccable service redefine the meaning of indul...<a href="#">read more</a></p>
+                <h6>By <a href="https://twitter.com/ola0luwajj">John-Livingprooff</a></h6>
+            </span>
+            <span>
+                <img src="images/blogs/gardens.jpg" alt="Nature">
+                <h3>Preserving Nature's Bounty</h3>
+                <p>Discover the beauty of sustainable tourism in Malawi with Eden Estates & Resort. Explore how we're committed to preserving nature's boun...<a href="#">read more</a></p>
+                <h6>By <a href="https://twitter.com/ola0luwajj">John-Livingprooff</a></h6>
+            </span>
+        </section>
+    </section>
     <!-- accommodation options -->
     <section class="section sect-four" id="acc_sect"> 
         <div class="acc-box">
@@ -109,7 +184,7 @@
             <h3>standard <br>Deluxe Rooms</h3>
             <p>High-ceilinged and well-polished continental rooms. <br>
                 Suitable for Romantic Getaways, and leisure retreats</p>
-            <h4>From: <br><b>$95 per night</b></h4>
+            <h4>From: <br><b id="deluxe-price">$95 per night</b></h4>
             <button id="book-now-room" ><a href="deluxe">Book Now</a></button>
         </div><br>
         <div class="acc-box">
@@ -117,7 +192,7 @@
             <h3>Two-bedroom <br>Family Cottages</h3>
             <p>Fully furnished and serviced 2-bedroom homes. <br>
                 Suitable for all family gateways and team retreats.</p>
-            <h4>Price: <br><b>$170 per night</b></h4>
+            <h4>Price: <br><b id="cottage-price">$170 per night</b></h4>
             <button id="book-now-room"><a href="cottage">Book Now</a></button>
         </div>
         <div class="acc-box">
@@ -125,7 +200,7 @@
             <h3>Studio-loft <br>Apartments</h3>
             <p>Fully furnished and serviced studio loft apartment. <br>
                 Suitable for a relaxation or work getaway.</p>
-            <h4>From: <br><b>$110 per night</b></h4>
+            <h4>From: <br><b id="apartment-price">$110 for 1 night</b></h4>
             <button id="book-now-room"><a href="apartment">Book now</a></button>
         </div>
     </section>
@@ -200,6 +275,7 @@
                 <a href="https://x.com/edenestatesmw">
                     <img src="images/x-social-media-round-icon.png" alt="x-logo" width="20px" height="20px">
                 </a></li>
+                <li><div id="TA_socialButtonBubbles177" class="TA_socialButtonBubbles"><ul id="x3vtQaUcPC" class="TA_links DZH7uFq2u"><li id="X1B2ZAIw7LSj" class="BwC643sFFxA"><a target="_blank" href="https://www.tripadvisor.com/Hotel_Review-g293811-d12406452-Reviews-Eden_Estates_Resort-Lilongwe_Central_Region.html"><img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_logomark.svg"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=socialButtonBubbles&amp;uniq=177&amp;locationId=12406452&amp;color=green&amp;size=rect&amp;lang=en_US&amp;display_version=2" data-loadtrk onload="this.loadtrk=true"></script></li>
                 <li><br>
                     Designed by <a href="https://github.com/johnlivingprooff" target="_blank">81PIXELS</a>
                 </li>
