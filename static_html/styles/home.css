@@ -355,6 +355,59 @@
         transition: all ease-in-out 0.3s;
         filter: grayscale(0%);
     }
+
+    .blogg {
+        justify-content: center;
+        align-items: center;
+        margin-top: 65px;
+        margin-bottom: 50px;
+        height: auto;
+        text-align: center;
+        color: #8a8a8a;
+        a {
+            text-decoration: none;
+            color: #8a8a8a;
+        }
+    }
+
+    .blogg a:hover {
+        color: #001a56;
+    }
+
+    .titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 70px;
+    }
+
+    .titles span {
+        border: #001a56 1px solid;
+        margin: 15px 15px;
+        padding: 0 35px 0 35px;
+        p, h3 {
+            width: 100%;
+            text-align: justify;
+            a {
+                font-size: 12px;
+                text-decoration: underline;
+                color: #001a56;
+            }
+        }
+        h6 {
+            width: 80%;
+            text-align: left;
+            color: #001a56;
+            a {
+                text-decoration: none;
+                color: #001a56;
+            }
+        }
+        img {
+            display: none;
+        }
+    }
 }
 
 /* Desktop viewport*/
@@ -730,7 +783,7 @@
         padding: 0 35px 0 35px;
         p, h3 {
             width: 100%;
-            text-align: justify;
+            text-align: left;
             a {
                 font-size: 12px;
                 text-decoration: underline;
@@ -1101,5 +1154,58 @@
         transform: scale(1.01);
         transition: all ease-in-out 0.3s;
         /* filter: grayscale(0%); */
+    }
+
+    .blogg {
+        justify-content: center;
+        align-items: center;
+        margin-top: 65px;
+        margin-bottom: 50px;
+        height: auto;
+        text-align: center;
+        color: #8a8a8a;
+        a {
+            text-decoration: none;
+            color: #8a8a8a;
+        }
+    }
+
+    .blogg a:hover {
+        color: #001a56;
+    }
+
+    .titles {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        margin-top: 70px;
+    }
+
+    .titles span {
+        border: #001a56 1px solid;
+        margin: 15px 15px;
+        padding: 0 35px 0 35px;
+        p, h3 {
+            width: 100%;
+            text-align: justify;
+            a {
+                font-size: 12px;
+                text-decoration: underline;
+                color: #001a56;
+            }
+        }
+        h6 {
+            width: 80%;
+            text-align: left;
+            color: #001a56;
+            a {
+                text-decoration: none;
+                color: #001a56;
+            }
+        }
+        img {
+            display: none;
+        }
     }
 }

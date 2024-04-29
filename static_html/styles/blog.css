@@ -161,3 +161,134 @@
     color: #001a56;
     text-decoration: underline;
 }
+
+@media screen and (max-width: 1024px) {
+    .blogcontent {
+        margin: 0 100px;
+    }
+
+    .other {
+        margin: 50px 50px 40px 50px;
+    }
+
+    .blogpost {
+        margin: 50px 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .img-title-cont h1 {
+        font-size: 100px;
+        letter-spacing: 5px;
+    }
+
+    .featured div span {
+        margin-left: 25px;
+    }
+
+    .featured img {
+        height: 35vh;
+    }
+
+    .featured div span h1 {
+        line-height: 20px;
+        font-size: smaller;
+        margin-bottom: -15px;
+    }
+
+    .featured h2 {
+        font-size: 20px;
+    }   
+
+    .featured div span p {
+        line-height: 15px;
+        font-size: 9.5px;
+        margin-top: -10px;
+    }
+
+    .featured div span i {
+        font-size: 8px;
+    }
+
+    .blogcontent {
+        margin: 0 50px;
+    }
+
+    .other {
+        margin: 50px 25px 40px 25px;
+        flex-direction: column;
+    }
+
+    .other div {
+        margin: auto 0 25px 0;
+    }
+
+    .other span h1 {
+        font-size: 12px;
+    }
+
+    .other span h2 {
+        font-size: 15px;
+    }
+
+    .other img {
+        height: 25vh;
+    }
+
+    .other span p {
+        font-size: 10px;
+        line-height: 15px;
+        text-wrap: wrap;
+        width: 50%;
+    }
+
+    .other span i {
+        font-size: 8px;
+        line-height: 5px;
+        display: none;
+    }
+
+    .blogpost {
+        margin: 50px 50px;
+    }
+}
+
+@media screen and (max-width: 427px) {
+    .img-title-cont h1 {
+        font-size: 50px;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    .blogcontent {
+        margin: 0 25px;
+    }
+
+    .featured {
+        margin-bottom: 25px;
+    }
+
+    .featured div {
+        flex-direction: column;
+    }
+
+    .featured div img {
+        height: 20vh;
+        border-radius: 5px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .featured div span {
+        margin-left: 0;
+    }
+
+    .other {
+        margin: 50px 10px 40px 10px;
+    }
+
+    .blogpost {
+        margin: 50px 25px;
+    }
+}
