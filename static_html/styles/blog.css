@@ -151,3 +151,13 @@
     color: #001a56;
     text-decoration: underline;
 }
+
+.blogpost a {
+    color: #000;
+    text-decoration: none;
+}
+
+.blogpost a:hover {
+    color: #001a56;
+    text-decoration: underline;
+}
