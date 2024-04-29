@@ -1,0 +1,153 @@
+.sect-six {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 30vh;
+}
+
+.img-title-cont {
+    width: 100%;
+    background-image: url(../images/welcome-side.JPG);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    h1 {
+        margin-top: 50px;
+        padding: 0 15px;
+        font-size: 150px;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 10px;
+        text-shadow: 0 0 100px #000000;
+    }
+}
+
+.blogcontent {
+    margin: 0 200px;
+}
+
+.featured {
+    margin-bottom: 25px;
+}
+.featured div {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    span {
+        margin-left: 50px;
+    }
+}
+
+.featured div span i {
+    font-size: 15px;
+    font-weight: 250;
+}
+
+.featured div span p {
+    line-height: 25px;
+}
+
+.featured div span p a {
+    color: #000;
+    text-decoration: none;
+}
+
+.featured div span p a:hover {
+    color: #001a56;
+    text-decoration: underline;
+}
+
+.img-f {
+    height: 50vh;
+    border-radius: 15px 0 0 15px;
+}
+
+.img-o {
+    height: 30vh;
+    transition: all ease-in-out 0.5s;
+    border-radius: 15px 30px 0 15px;
+}
+
+.img-o:hover {
+    border-radius: 15px 25px 30px 15px;
+    transition: all ease-in-out 0.5s;
+    height: 35vh;
+}
+
+.other {
+    display: flex;
+    justify-content: center;
+    margin: 50px 100px 40px 100px;
+}
+
+.other div {
+    margin-left: 50px;
+}
+
+.other span p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.other span i {
+    font-size: 10px;
+    line-height: 5px;
+}
+
+.other div span p a {
+    color: #000;
+    text-decoration: none;
+}
+
+.other div span p a:hover {
+    color: #001a56;
+    text-decoration: underline;
+}
+
+.blogpost {
+    margin: 50px 250px;
+}
+
+.top-b {
+    width: 100%;
+    border-radius: 15px;
+    height: 40vh;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.blogpost {
+    line-height: 30px;
+}
+
+.blogpost h1 {
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+.blogpost i {
+    font-size: 14px;
+    font-weight: 300;
+    color: #8e8007;
+}
+
+.blogpost h5 {
+    font-size: 15px;
+    font-weight: 300;
+    color: #8e8007;
+    a {
+    color: #8e8007;
+    text-decoration: none;
+    }
+}
+
+.blogpost h5 a:hover {
+    color: #001a56;
+    text-decoration: underline;
+}
