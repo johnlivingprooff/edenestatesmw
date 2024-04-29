@@ -109,24 +109,7 @@
                 document.getElementById('cottage-price').textContent = cottagePriceText;
                 document.getElementById('apartment-price').textContent = apartmentPriceText;
         
-                // Calculate number of nights
-                const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
-                const firstDate = new Date(checkinInput.value);
-                const secondDate = new Date(checkoutInput.value);
-                const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
-        
-                // Update prices
-                const deluxePrice = 95;
-                const cottagePrice = 170;
-                const apartmentPrice = 110;
-        
-                const deluxePriceText = '$' + (deluxePrice * diffDays) + ' for ' + diffDays + (diffDays === 1 ? ' night' : ' nights');
-                const cottagePriceText = '$' + (cottagePrice * diffDays) + ' for ' + diffDays + (diffDays === 1 ? ' night' : ' nights');
-                const apartmentPriceText = '$' + (apartmentPrice * diffDays) + ' for ' + diffDays + (diffDays === 1 ? ' night' : ' nights');
-        
-                document.getElementById('deluxe-price').textContent = deluxePriceText;
-                document.getElementById('cottage-price').textContent = cottagePriceText;
-                document.getElementById('apartment-price').textContent = apartmentPriceText;
+               
             }
         
             // Add event listeners to check-in and check-out inputs for validation
