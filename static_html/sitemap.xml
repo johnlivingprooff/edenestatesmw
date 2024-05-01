@@ -5,33 +5,122 @@
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    <url>
-        <loc>https://edenestatesmw.com/gallery</loc>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
+
+    
     <url>
         <loc>https://edenestatesmw.com/about</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    
+
     <url>
-        <loc>https://edenestatesmw.com/blog</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://edenestatesmw.com/#contact-form</loc>
+        <loc>https://edenestatesmw.com/apartment</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+
+
+    <url>
+        <loc>https://edenestatesmw.com/blog</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
     <url>
         <loc>https://edenestatesmw.com/book-now</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+
+
+    <url>
+        <loc>https://edenestatesmw.com/booking-app</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
+    <url>
+        <loc>https://edenestatesmw.com/cottage</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
+    <url>
+        <loc>https://edenestatesmw.com/deluxe</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
+    <url>
+        <loc>https://edenestatesmw.com/gallery</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
+    <url>
+        <loc>https://edenestatesmw.com/google9784699445e87b4a</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
+    <url>
+        <loc>https://edenestatesmw.com/index</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
     <url>
         <loc>https://edenestatesmw.com/policies</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
+    <url>
+        <loc>https://edenestatesmw.com/reservation</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
+    <url>
+        <loc>https://edenestatesmw.com/thank-you</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
+    <url>
+        <loc>https://edenestatesmw.com/blogs/a-travelers-guide-to-hidden-gems</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+
+    <url>
+        <loc>https://edenestatesmw.com/blogs/indulgence-redefined</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
+    <url>
+        <loc>https://edenestatesmw.com/blogs/preserving-natures-bounty</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+
+    <url>
+        <loc>https://edenestatesmw.com/blogs/tales-from-our-tranquil-oasis</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

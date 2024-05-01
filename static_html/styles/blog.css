@@ -239,7 +239,7 @@
         font-size: 10px;
         line-height: 15px;
         text-wrap: wrap;
-        width: 50%;
+        width: 100%;
     }
 
     .other span i {
@@ -285,7 +285,7 @@
     }
 
     .other {
-        margin: 50px 10px 40px 10px;
+        margin: 50px 10px 40px 15px;
     }
 
     .blogpost {
