@@ -28,3 +28,9 @@ RewriteRule ^(.*)$ /static_html/$1 [L,QSA]
 
 # 404 error page
 ErrorDocument 404 /404.html
+
+# 403 error page
+ErrorDocument 403 /404.html
+
+# 302 error page
+ErrorDocument 302 /
