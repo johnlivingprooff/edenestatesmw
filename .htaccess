@@ -25,3 +25,6 @@ RewriteRule ^static_html/index\.html$ http://edenestatesmw.com/ [R=301,L]
 # Redirects the static_html/ to root domain
 RewriteCond %{REQUEST_URI} !^/static_html/
 RewriteRule ^(.*)$ /static_html/$1 [L,QSA]
+
+# 404 error page
+ErrorDocument 404 /404.html
