@@ -1,0 +1,51 @@
+.hero-sect {
+    justify-content: center;
+    display: none;
+    height: 70vh;
+}
+
+.hero {
+    background-image: url('../images/nathan-dumlao-6VhPY27jdps-unsplash.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    width: 100%;
+}
+
+.hero h1 {
+    text-transform: uppercase;
+    justify-content: center;
+    padding: 25px 15px;
+    font-size: 150px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 10px;
+    text-shadow: 0 0 100px #000000;
+}
+
+.hero p {
+    font-size: 50px;
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 0 0 100px rgba(0,0,0,1);
+    margin-top: -105px;
+}
+
+.one {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    background-image: url('../images/leaves.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.one iframe {
+    margin-top: 35px;
+    justify-content: center;
+    text-align: center;
+}
