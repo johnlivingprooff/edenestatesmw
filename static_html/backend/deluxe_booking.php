@@ -29,16 +29,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $price = $numNights * $rooms * $pricePerNight;
 
     // Prepare email message
-    $message = "Number of Rooms: $rooms Deluxe room(s)\n";
-    $message .= "Guest Names: $guestNames\n";
-    $message .= "First Name: $firstName\n";
-    $message .= "Last Name: $lastName\n";
-    $message .= "Price: $$price\n";
-    $message .= "Check-in: $checkin\n";
-    $message .= "Check-out: $checkout\n";
-    $message .= "Phone: $phone\n";
-    $message .= "Email: $email\n";
-    $message .= "Vital Info: $vitalInfo\n";
+    $message = "<h2>BOOKING CONFIRMATION - Deluxe Rooms</h2>";
+    $message .= "<p>Dear $firstName,</p>";
+    $message .= "<p>Thank you for choosing Eden Estates for your accommodation needs. Below is the information regarding your reservation:</p>";
+    $message .= "<table border='1' cellpadding='5'>";
+    $message .= "<tr><td><b>Number of Rooms:</b></td><td>$rooms Deluxe room(s)</td></tr>";
+    $message .= "<tr><td><b>Guest Names:</b></td><td>$guestNames</td></tr>";
+    $message .= "<tr><td><b>Price:</b></td><td>$$price</td></tr>";
+    $message .= "<tr><td><b>Check-in:</b></td><td>$checkin</td></tr>";
+    $message .= "<tr><td><b>Check-out:</b></td><td>$checkout</td></tr>";
+    $message .= "<tr><td><b>Phone:</b></td><td>$phone</td></tr>";
+    $message .= "<tr><td><b>Email:</b></td><td>$email</td></tr>";
+    $message .= "<tr><td><b>Vital Info:</b></td><td>$vitalInfo</td></tr>";
+    $message .= "</table>";
+    $message .= "<p>We look forward to hosting you at Eden Estates. If you have any questions or need further assistance, please feel free to contact us.</p>";
+    $message .= "<img src='https://edenestatesmw.com/static_html/images/sign.png' alt='Eden Estates Sign' style='width: 100%; max-width: 600px;'>";
 
     // Create a new PHPMailer instance
     $mail = new PHPMailer();
@@ -57,7 +62,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail->setFrom($email);
     $mail->addAddress('reservations@edenestatesmw.com');
     $mail->addCC($email); // CC the sender
-    $mail->Subject = 'New Deluxe Room Reservation';
+    $mail->Subject = 'Your Booking Info - Eden Estates';
+    $mail->isHTML(true);
     $mail->Body = $message;
 
     // Send email and handle errors
@@ -73,3 +79,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     header("Location: /booking-page.html");
     exit;
 }
+?>
