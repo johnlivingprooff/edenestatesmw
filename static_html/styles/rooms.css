@@ -406,3 +406,12 @@
     }
 
 }
+
+.sect-two span a {
+    text-decoration: none;
+    color: #001a56;
+}
+
+.sect-two span a:hover {
+    color: rgb(111, 111, 6);
+}
