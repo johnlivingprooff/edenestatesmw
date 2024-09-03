@@ -1,9 +1,16 @@
 from mailchimp_marketing import Client
+from dotenv import load_dotenv
+import os
+
+
+load_dotenv()
+mailchimp_api = os.getenv('MAILCHIMP_API_KEY')
+mchimp_server_id = os.getenv('MAILCHIMP_SERVER_ID')
 
 mailchimp = Client()
 mailchimp.set_config({
-  "api_key": "527355d6d97fbe5784f9b78d25d5c2c2-us21",
-  "server": "us21"
+  "api_key": mailchimp_api,
+  "server": mchimp_server_id
 })
 
 response = mailchimp.ping.get()

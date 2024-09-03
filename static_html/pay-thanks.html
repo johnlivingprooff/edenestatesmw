@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Written by John-Livngprooff -->
-    <title>Book Your Stay―A Slice of Heaven</title>
+    <title>Thank You for Booking―A Slice of Heaven</title>
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/booking.css">
+    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="./styles/rooms.css">
     <link rel="shortcut icon" href="images/emblem.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9965595303680053"
      crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/ac4cce8e8ff53e514b9756fa4/39c87150d03397eef060ce9cd.js");</script></head>
+</head>
 <body>
     <header class="section header">
         <a href="/"><img src="images/emblem.png" alt="Eden_Logo" id="logo"></a>
@@ -28,41 +29,35 @@
             <button id="book-now">Book Now</button>
         </a>
     </header>
-    <section class="section sect-one">
-        <h2>Book Your Reservation<br>֎↓֎</h2>
+
+    <section class="section sect-two">
+        <div class="side-img-cont">
+            <img src="images/gallery/20.jpg" alt="WELCOME">
+        </div>
+        <span>
+            <h1>Thank you!</h1>
+            <p>We have recieved your Payment*</p>
+            <!-- <button id="explore"><a href="#">PAY NOW</a></button><br> -->
+            <button id="explore"><a href="blog">OUR BLOG</a></button>
+        </span>
     </section>
-    <section class="sect-two">
-        <div class="acc-box">
-            <img src="images/deluxe-lamp.jpg" alt="Deluxe Room">
-            <span><h3>standard Deluxe <br>Rooms</h3>
-            <p>High-ceilinged and well-polished continental rooms.
-                Suitable for Romantic Getaways, and leisure retreats</p>
-            <h4>From: <br><b>$95 per night</b></h4>
-            <a href="deluxe"><button id="book-now-room" >Book Now</button></a></span>
+
+    <section class="section sect-contact">
+        <div id="contact-form">
+            <h2>Contact Us</h2>
+    
+            <form id="contct-form">
+                <input type="text" id="name" placeholder="Your Name" required><br>
+                <input type="phone" id="phone" placeholder="Phone" required><br>
+                <input type="email" id="email" placeholder="Your Email" required><br><br>
+                <label for="message">Leave Your Message:</label><br><br>
+                <textarea id="message" rows="4" required></textarea><br><br>
+                <button type="submit">Submit</button>
+            </form><br>
+            <div id="contact-message"></div>
         </div>
-        <div class="acc-box">
-            <img src="images/house-three.jpg" alt="Deluxe Room">
-            <span><h3>Two-bedroom<br>Family cottage</h3>
-            <p>Fully furnished and serviced 2-bedroom homes.
-                Suitable for all family gateways and team retreats.</p>
-            <h4>From: <br><b>$170 per night</b></h4>
-            <a href="cottage"><button id="book-now-room" >Book Now</button></a></span>
-        </div>
-        <div class="acc-box">
-            <img src="images/apartment-main-lounge.jpg" alt="Deluxe Room">
-            <span><h3>Studio-loft<br>Apartments</h3>
-            <p>Fully furnished and serviced studio loft apartment.
-                Suitable for a relaxation or work getaway.</p>
-            <h4>From: <br><b>$110 per night</b></h4>
-            <a href="apartment"><button id="book-now-room" >Book Now</button></a></span>
-        </div>
-        <div class="acc-box">
-            <img src="images/conference-one.jpg" alt="Deluxe Room">
-            <span><h3>conferences/<br>events</h3>
-            <p>Host your Conferences/Meetings, Corporate/Social events in our exclusive venues</p>
-            <h4>From: <br><b>$20 per person</b></h4>
-            <a href="mailto:info@edenestatesmw.com"><button id="book-now-room" >Request Quote</button></a></span>
-        </div>
+        <script src="scripts/contact-form.js"></script>
+        <div class="side-img-form"></div>
     </section>
     <div class="section" id="wa-me">
         <a href="https://wa.me/+265984222331" target="_blank">
@@ -117,3 +112,4 @@
     <script src="scripts/full-page-animate.js"></script>
 </body>
 </html>
+<!-- God Did -->
