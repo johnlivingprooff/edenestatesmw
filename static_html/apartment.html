@@ -183,11 +183,11 @@
             const numRooms = document.getElementById('rooms').value;
             const adultGuests = adultGuestsSelect.value;
 
-            let pricePerNight = 110; // Default price per night
+            let pricePerNight = 120; // Default price per night
 
             // Adjust price based on the number of adult guests
             if (adultGuests === '1') {
-                pricePerNight = 100; // Adjusted price for 1 adult guest
+                pricePerNight = 130; // Adjusted price for 1 adult guest
             }
 
             const price = numNights * numRooms * pricePerNight;

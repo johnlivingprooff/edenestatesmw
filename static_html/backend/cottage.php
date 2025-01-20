@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Set up SMTP configuration
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;
     $mail->isSMTP();
-    $mail->Host = 'mail.edenestatesmw.com';
+    $mail->Host = 'edenestatesmw.com';
     $mail->SMTPAuth = true;
     $mail->Username = 'admin@edenestatesmw.com';
     $mail->Password = '@dM1n.E3l//p';

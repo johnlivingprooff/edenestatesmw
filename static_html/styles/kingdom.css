@@ -1,0 +1,292 @@
+/* desktop view-port */
+@media only screen and (min-width: 800px) {
+    .top {
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        height: 80vh;
+    }
+
+    .top h1 {
+        display: grid;
+        place-items: center;
+        font-size: 10em;
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        padding: 150px;
+        color: white;
+        line-height: 135px;
+        font-weight: 1000;
+        text-align: center;
+        text-shadow: 2px 2px 100px #000;
+    }
+
+    .read {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        place-items: center;
+    }
+
+    .txt {
+        padding: 0 50px;
+    }
+
+    .txt h2 {
+        font-size: 50px;
+        text-transform: uppercase;
+        line-height: 45px;
+        padding-bottom: 25px;
+        font-weight: 750;
+    }
+
+    .txt p {
+        text-align: justify;
+        padding-right: 25px;
+        padding-top: 30px;
+    }
+
+
+#quote {
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: #001a56;
+    color: #dce3c8;
+    padding: 10px 15px;
+    border: none;
+    transition: all ease 0.5s;
+    margin-top: 45px;
+}
+
+#quote:hover {
+    background-color: beige;
+    color: #001a56;
+}
+
+.course {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+    margin-bottom: 50px;
+}
+
+.course h1 {
+    font-size: 45px;
+    font-weight: 100;
+    color: grey;
+}
+
+.course div {
+    margin: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 50px;
+    text-align: center;
+}
+
+.course h2 {
+    font-weight: 650;
+    padding-bottom: 15px;
+    color: #e2a732;
+}
+
+.course div p {
+    text-align: justify;
+}
+
+.facilitate {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+}
+
+.facilitate h1 {
+    font-size: 45px;
+    font-weight: 100;
+    color: grey;
+}
+
+.facilitate div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+}
+
+/* tablet view-port */
+@media only screen and (max-width: 770px) {
+    .top {
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
+        height: 40vh;
+    }
+
+    .top h1 {
+        display: grid;
+        place-items: center;
+        font-size: 4em;
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        padding: 60px 50px;
+        color: white;
+        line-height: 65px;
+        font-weight: 1000;
+        text-align: center;
+        text-shadow: 2px 2px 100px #000;
+    }
+
+    .read {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        place-items: center;
+    }
+
+    .txt {
+        padding: 0 45px;
+    }
+
+    .txt h2 {
+        font-size: 20px;
+        text-transform: uppercase;
+        line-height: 21px;
+        font-weight: 750;
+        margin-top: 45px;
+        padding-bottom: 25px;
+    }
+
+    .txt p {
+        text-align: justify;
+        padding-right: 25px;
+        font-size: 8px;
+        padding-top: 3px;
+    }
+video::-webkit-media-controls {
+    display: none;
+}
+
+#quote {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: #001a56;
+    color: #dce3c8;
+    padding: 10px 15px;
+    border: none;
+    transition: all ease 0.5s;
+    margin-top: 45px;
+}
+
+#quote:hover {
+    background-color: beige;
+    color: #001a56;
+}
+
+.course {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+    margin-bottom: 50px;
+}
+
+.course h1 {
+    font-size: 25px;
+    font-weight: 100;
+    color: grey;
+}
+
+.course div {
+    margin: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 50px;
+    text-align: center;
+}
+
+.course h2 {
+    font-size: 15px;
+    font-weight: 650;
+    padding-bottom: 15px;
+    color: #e2a732;
+}
+
+.course div p {
+    text-align: justify;
+}
+
+.facilitate {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    place-items: center;
+}
+
+.facilitate h1 {
+    font-size: 45px;
+    font-weight: 100;
+    color: grey;
+}
+
+.facilitate div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+
+/* mobile view-port */
+@media only screen and (max-width: 500px) {
+    .top {
+        background-size: cover;
+        background-position: bottom;
+        background-attachment: fixed;
+        height: 40vh;
+    }
+
+    .top h1 {
+        display: grid;
+        place-items: center;
+        font-size: 4em;
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        padding: 60px 50px;
+        color: white;
+        line-height: 65px;
+        font-weight: 1000;
+        text-align: center;
+        text-shadow: 2px 2px 100px #000;
+    }
+
+    .read {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        place-items: center;
+    }
+
+    .txt {
+        padding: 0 45px;
+    }
+
+    .txt h2 {
+        font-size: 20px;
+        text-transform: uppercase;
+        line-height: 21px;
+        font-weight: 750;
+        margin-top: 45px;
+        padding-bottom: 25px;
+    }
+
+    .txt p {
+        text-align: justify;
+        padding-right: 25px;
+        font-size: 8px;
+        padding-top: 3px;
+    }
+}
+
+video::-webkit-media-controls {
+    display: none;
+}
+
+.top {
+    background-image: url('../images/81PX-0231.jpg');
+}
