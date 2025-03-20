@@ -73,7 +73,10 @@
         <div class="addrs">
             <ul>
                 <h2>Eden Estates & Resort</h2>
-                <p>A Slice of Heaven―©2024</p>
+                <p>A Slice of Heaven―©<span id="year"></span></p>
+                <script>
+                    document.getElementById('year').textContent = new Date().getFullYear();
+                </script>
                 <li><b>Head Office:</b> Old-Airport Road, S117, Lilongwe</li>
                 <li>Malawi, Africa</li>
             </ul>
